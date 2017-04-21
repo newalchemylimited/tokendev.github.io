@@ -124,28 +124,36 @@ p {
 }
 
 #nav-set {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: wrap-reverse;
-  -ms-flex-wrap: wrap-reverse;
-  flex-wrap: wrap-reverse;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-content: space-between;
-  -ms-flex-line-pack: justify;
-  align-content: space-between;
-  -webkit-align-items: flex-end;
-  -ms-flex-align: end;
-  align-items: flex-end;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: flex-end;
+    -ms-flex-line-pack: end;
+    align-content: flex-end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
 }
 
 #nav-set li a {
   font-size: 1em;
+}
+
+.navbar-top {
+  float: right;
+}
+
+.navbar-bottom {
+  float: right;
 }
 
 .navbar-default {
@@ -204,39 +212,22 @@ p {
   border-color: rgba(256,256,256,.3);
 }
 
-/* MARKER */
-.collapse {
-  background-size:100px;
-}
-
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #fff;
 }
 
 .navbar-brand {
-  padding: 0 15px;
-  line-height: 20px;
-}
-
-.navbar-brand h3 {
-  font-weight: 400;
-  color: rgba(256,256,256,.7);
-}
-
-/* .navbar-brand h3 { */
-/*   height: 90px; */
-/*   position: relative; */
-/* } */
-
-.logo-replace {
-  width: 218px;
-  background: url("../img/logo.png") no-repeat;
-  padding: 60px 0 0 0;
-  height: 0;
-  overflow: hidden;
+  background: url("../img/logo-sm.png")no-repeat;
+  width: 270px;
+  height: 80px;
 }
 
 @media(min-width:768px) {
+  .navbar-brand {
+     background: url("../img/logo.png")no-repeat;
+     margin-left: 16px;
+  }
+
   .navbar-default {
      border-color: rgba(255,255,255,.3);
      background-color: transparent;
@@ -286,7 +277,6 @@ p {
    .navbar-default.affix .nav>li>a:focus:hover {
      color: #A29AA5;
    }
-   /* MARKER */
 }
 
 /***************************/
