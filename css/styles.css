@@ -217,14 +217,14 @@ p {
 }
 
 .navbar-brand {
-  background: url("../img/logo-sm.png")no-repeat;
+  background: url("../img/tc-logo-sm.png")no-repeat;
   width: 270px;
   height: 80px;
 }
 
 @media(min-width:768px) {
   .navbar-brand {
-     background: url("../img/logo.png")no-repeat;
+     background: url("../img/tc-logo.png")no-repeat;
      margin-left: 16px;
   }
 
