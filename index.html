@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="TokenCard by Monolith Ventures">
+<meta name="description" content="TokenCard lets anyone attach their existing token wallet to a VISA debit card. Use your favorite (or least favorite) tokens to purchase anything from a new laptop to a cup of coffee.">
+<meta name="generator" content="Hugo 0.19" />
+<title>TokenCard</title>
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="https://tokencard.io/favicon.ico">
+<!-- Bootstrap Core CSS -->
+<link rel="stylesheet" href="https://tokencard.io/css/bootstrap.min.css" type="text/css">
+<!-- Custom Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&amp;subset=latin-ext" rel="stylesheet">
+<link rel="stylesheet" href="https://tokencard.io/font-awesome/css/font-awesome.min.css" type="text/css">
+<!-- Plugin CSS -->
+<link rel="stylesheet" href="https://tokencard.io/css/animate.min.css" type="text/css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="https://tokencard.io/css/styles.css" type="text/css">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+    </head>
+    <body id="page-top">
+
+        <!-- HEADER -->
+<header>
+<script>
+var countDownDate = new Date("May 2, 2017 16:00:00 GMT").getTime();
+
+var delayCount = 0;
+
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  
+  var distance = countDownDate - now;
+  
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  days < 10 ? document.querySelector(".days").innerHTML = '0' + days : document.querySelector(".days").innerHTML = days;
+  hours < 10 ? document.querySelector(".hours").innerHTML = '0' + hours : document.querySelector(".hours").innerHTML = hours;
+  minutes < 10 ? document.querySelector(".minutes").innerHTML = '0' + minutes : document.querySelector(".minutes").innerHTML = minutes;
+   
+  
+  
+  
+  
+  
+  seconds < 10 ? document.querySelector(".seconds").innerHTML = '0' + seconds : document.querySelector(".seconds").innerHTML = seconds;
+
+  
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("cd-title").innerHTML = "TKN Creation Event In Progress!";
+    document.getElementById("cd_timer").style.display='none';
+  }
+  delayCount ++;
+}, 1000);
+</script>
+</header>
+
+
+        
+            <!-- NAVIGATION -->
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			
+      <a class="navbar-brand page-scroll" href="#page-top"><h3 class="logo-replace">Token</h3></a>
+			
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" class="navbar-collapse">
+      <div id="nav-set">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/tokencard_whitepaper.pdf" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> Download the Whitepaper</a></li>
+          <li><a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>  Twitter</a></li>
+          <li><a href="https://tokencard-team.herokuapp.com/" target="_blank"><i class="fa fa-slack" aria-hidden="true"></i> Slack</a></li>
+        </ul>
+        </div>
+        <div class="nav-set">
+			  <ul class="nav navbar-nav navbar-right">
+			  	<li><a class="page-scroll" href="#whitepaper">The Card</a></li>
+			  	<li>
+			  		<a class="page-scroll" href="#app">The App</a>
+			  	</li>
+			  	<li> <a class="page-scroll" href="#TKN">TKN</a> </li>
+			  	<li> <a class="page-scroll" href="#summary">Creation</a> </li>
+			  	
+			  	
+			  	<li>
+			  		<a class="page-scroll" href="#partners">Partners</a>
+			  	</li>
+			  	
+			  	
+			  </ul>
+    </div>
+		</div>
+		<!-- /.navbar-collapse -->
+	</div>
+	<!-- /.container-fluid -->
+</nav>
+
+        
+
+        
+            <!-- HERO -->
+
+<div class="hero">
+  <div class="hero-content">
+    <div class="hero-content-inner">
+      <div class="hdr_hdr">
+        
+        <h3>TokenCard: Smart Contracts &#43; VISA </h3><br>
+        
+      </div>
+      <div id="hdr_img">
+        <img src="/img/tokencard.png">
+      </div>
+
+      <noscript>
+        <style>
+          #spend_text {display:none;}
+        </style>
+        <h1>Spend ETH, REP, GNT, 1ST, MKR, DAI, ICN, DGX, DGD, and TKN.</h1>
+      </noscript>
+
+      <h1 id="spend_text">Spend <span class=token>ETH</span></h1>
+
+		<h3 id="cd-title">TKN Creation Event: May 2, 16:00 GMT</h3>
+		<br />
+     
+        <div id="countdown">
+          <ul id="cd_timer" style="padding-left: 0;">
+            <li><span class="days">00</span><br><span class="cd_tag">Days</span></li>
+            <li><span class="faded">:</span></li><span class="cd_tag">
+              <li><span class="hours">00</span><br><span class="cd_tag">Hours</span></li>
+              <li><span class="faded">:</span></li><span class="cd_tag">
+              <li><span class="minutes">00</span><br><span class="cd_tag">Minutes</span></li>
+              <li><span class="faded">:</span></li><span class="cd_tag">
+              <li><span class="seconds">00</span><br><span class="cd_tag">Seconds</span></li>
+          </ul>
+        </div>
+
+        <noscript>
+          <p>Please enable Javascript to see things in action...</p>
+        </noscript>
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+          
+
+          
+  				<div id="mc_embed_signup">
+  					<form action="//ventures.us14.list-manage.com/subscribe/post?u=a08825d6fe73df28f11896631&amp;id=6a483baf08" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+  						<div id="form-group mc_embed_signup_scroll">
+  							<div class="mc-field-group">
+                  <div style="display: flex; justify-content: center; height: 45px;">
+  								  <input type="email" value="" placeholder="Enter your email to..." name="EMAIL" class="required email form-control" id="mce-EMAIL2" style="flex: 0 1 auto;">
+                    <input type="submit" value="Get Notified" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary btn-xl" style="flex: 0 1 auto;">
+                  </div>
+  							</div>
+  							<div id="mce-responses" class="clear">
+  								<div class="response" id="mce-error-response" style="display:none"></div>
+  								<div class="response" id="mce-success-response" style="display:none"></div>
+  							</div>    
+  							<div style="position: absolute; left: -5000px;" aria-hidden="true"><input style="width: 100px;" type="text" name="b_a08825d6fe73df28f11896631_6a483baf08" tabindex="-1" value=""></div>
+                <br>
+  							
+  						</div>
+  					</form>
+  				</div>
+  				<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+  				
+
+         <div id="hdr_link">
+           <span><a href="/tokencard_whitepaper.pdf">Download the Whitepaper &nbsp;<i class="fa fa-file-pdf-o fa-lg" aria-hidden="true"></i></a></span>
+           
+         </div>
+    </div>
+  </div>
+</div>
+
+        
+
+        
+            <!-- whitepaper -->
+<section class="" id="whitepaper">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2 text-center">
+				<h2 class="section-heading">TokenCard<sup>&trade;</sup> &ndash; Be Your Own Bank</h2>
+				<hr class="light">
+				<p class="">TokenCard<sup>&trade;</sup>
+				funds VISA debit card swipes with ERC20 tokens you already own while the <a class="page-scroll" href="#app">Token app</a> lets you manage your token finances. They are powered by <a class="page-scroll" href="#TKN">TKN</a>, a new asset-backed token funded by fees from the Token Card network.</p>
+
+				<img class="img-fit cc-shot" src="/img/tokencard.png">
+				<p>&nbsp;</p>
+				<h3 class="text-primary">Always Control Your Tokens</h3>
+				<p>TokenCard works with any ERC20 Token and any ERC20 Wallet. You never have to deposit tokens.</p>
+
+				<h3 class="text-primary">Mobile App</h3>
+				<p>The Token app: Token Wallet + VISA. <a class="page-scroll" href="#app">Click Here To See The App</a></p>
+
+				<h3 class="text-primary">ATMs Supported</h3>
+				<p>Use any VISA compatible ATM worldwide to turn tokens into cash</p>
+
+				<p> <a href="/tokencard_whitepaper.pdf">Download the Whitepaper</a> &nbsp;<i class="fa fa-file-pdf-o" aria-hidden="true"></i></a> &nbsp;&nbsp;&nbsp;&nbsp;
+			
+
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+        
+
+        
+            <!-- APP -->
+<section class="bg-alt" id="app">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 text-center">
+        <h2 class="section-heading">Token App: You Need This </h2>
+	<br />
+	<p>
+	Designed for tokens first. Over 1,000 hours of design focused on what modern token holders need.
+	</p>
+        <hr class="light">
+        <img class="img-fit app-shot" src="/img/tokencard-app1.jpg">
+        <h3 class="text-primary">Review Transactions</h3>
+	<p>See where you spend your tokens by category, recipient and vendor</p>
+        <h3 class="text-primary">Spending Options and Limits</h3>
+	<p>Set spending limits based on percentage of balance, time, tokens or fiat currency limits. 
+	</p>
+        <h3 class="text-primary">Charts and Dashboards</h3>
+	<p>Keep track of changing token values and spending with Token App's charts and graphs.
+	</p>
+
+        <h3 class="text-primary">Safe and Sound</h3>
+	<p>Made a mistake? Don't panic. Freeze a card or recover tokens &mdash; even if you've lost the keys.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+        
+
+      	<!-- APP -->
+<section class="" id="TKN">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 text-center">
+        <h2 class="section-heading">TKN Overview</h2>
+	<br />
+	<p>
+	TokenCard and the Token App are powered by TKN, a new ERC20-compliant token being created on May 2, 2017. Read our extensive documentation in <a href=/tokencard_whitepaper.pdf>the whitepaper</a> and in the <a class="page-scroll" href=#summary>Event Summary</a>.
+	
+        <h3 class="text-primary">Limited Number</h3>
+	<p>A fixed number of TKN will be created in exchange for Ether, Tokens and Fiat starting May 2, 2017. </p>
+
+        <h3 class="text-primary">Licensing Fee</h3>
+	<p>TokenCard swipes send 1% of tokens used to back the swipe to the TKN Asset Contract. </p>
+
+        <h3 class="text-primary">Free Swipes</h3>
+	<p>All swipes backed by TKN pay 0% licensing fees.  </p>
+
+        <h3 class="text-primary">TKN is Backed by Tokens</h3>
+	<p>
+	At any time, TKN can be cashed and burned in exchange for a pro-rata share of the tokens held.
+	</p>
+
+        <h3 class="text-primary">Diversification</h3>
+	<p>
+	Over time TKN's Asset Contract will accumulate the most popular tokens in the world.
+	</p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      	<!-- APP -->
+<section class="bg-alt" id="timeline">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 text-center">
+        <h2 class="section-heading">Timeline</h2>
+	<br />
+	<p>
+	We will launch an MVP for the 500 top TKN buyers by September 15, 2017. Smart Contracts are in process now, and the team is ready to get going immediately on the App and the server-side integrations. 
+
+	</p>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.19.1/vis.min.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.19.1/vis.min.css" rel="stylesheet" type="text/css" />	
+
+	<div id="visualization"></div>
+
+<script type="text/javascript">
+  
+  var container = document.getElementById('visualization');
+ var options = {zoomable: false }
+  
+  var items = new vis.DataSet([
+    {id: 1, content: 'Smart Contract Development', start: '2017-05-02', end: '2017-06-30'},
+    {id: 2, content: 'VISA Integration', start: '2017-05-02', end: '2017-07-30'},
+    {id: 3, content: 'Exchange Integration', start: '2017-06-15', end: '2017-08-15'},
+    {id: 4, content: 'iOS / Android MVP', start: '2017-05-15', end: '2017-08-30'},
+    {id: 5, content: 'MVP Launch Party!', start: '2017-09-15'},
+    {id: 6, content: 'Bug Fixes and Improvements', start: '2017-09-15', end: '2017-10-31'},
+    {id: 7, content: 'Beta Rollout', start: '2017-11-15'},
+  ]);
+
+
+  
+  var timeline = new vis.Timeline(container, items, options);
+</script>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      	<!-- TEAM -->
+<section id="summary">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2 text-center">
+				<h2 id="summary" class="section-heading">TKN creation Summary</h2>
+				<hr class=light>
+				<p>The TKN creation period commences on 2<sup>nd</sup> May 2017. The TokenCard project is capping contributions at 4,500,000 USD. We will accept ETH, fiat and other ERC20 tokens to build the platform as described in the <a href=/tokencard_whitepaper.pdf>whitepaper</a>.
+				</p>
+				<div class="sum-bullets">
+					<ul>
+						<li>Up to $4,500,000 accepted</li>
+						<li>Contributions can be made in ETH, fiat and ERC20 tokens</li>
+						<li>Certain ERC20 tokens will receive bonus TKN</li>
+						<li>The creation period lasts maximum 7 days</li>
+						<li>If the cap is reached, we extend 24 hours</li>
+						<li>No more TKN will be created after this period</li>
+					</ul>
+				</div>
+				<hr class="light">
+				<div>
+					<table class="sum-table">
+						<thead>
+							<tr>
+								<th>Amount Contributed</th>
+								<th>TKN : ETH</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="odd">
+								<td>0-750,000</td>
+								<td>150</td>
+							</tr>
+							<tr class="even">
+								<td>750,001-1,500,000</td>
+								<td>140</td>
+							</tr>
+							<tr class="odd">
+								<td>1,500,001-2,250,000</td>
+								<td>130</td>
+							</tr>
+							<tr class="even">
+								<td>2,250,001-3,000,000</td>
+								<td>120</td>
+							</tr>
+							<tr class="odd">
+								<td>3,000,001-,3750,000</td>
+								<td>110</td>
+							</tr>
+							<tr class="even">
+								<td>3,750,001-4,500,000</td>
+								<td>100</td>
+							</tr>
+							<tr class="odd">
+								<td>Overage Period</td>
+								<td>100</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+        
+            <!-- TEAM -->
+<section class="bg-alt" id="partners">
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Founding Partners</h2>
+                    <h3>These Guys Are Amazing</h3>
+                    <hr class="light">
+                </div>
+            </div>
+        </div>
+    
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="partners-box">
+                  <img class="img-circle wow flipInX text-primary" src=" /img/team/img-mel-gelderman.png ">
+                    <h3>Mel Gelderman</h3>
+                    <hr class="discrete">
+                    <h4>Project Leader</h4>
+                    
+                        <p class="text-muted">Mel previously consulted on blockchain for various banks and software companies in East Asia. He has always been driven by exponential technologies, founding an algae biofuel company at 15. Mel turned to Ethereum in 2014 upon understanding it’s remarkable potential and the pivotal role it holds in enabling other exponential technologies.</p>
+                    
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="partners-box">
+                  <img class="img-circle wow flipInX text-primary" src=" /img/team/img-david-hoggard.png ">
+                    <h3>David Hoggard</h3>
+                    <hr class="discrete">
+                    <h4>Partnerships and Finance</h4>
+                    
+                        <p class="text-muted">With an academic background in Mathematics and Finance, David has a deep understanding of both the regular and crypto markets. Recently passing CFA level 3, David is now pursuing real-world financial applications using Ethereum at Monolith Studio including a distributed banking system as part of the TokenCard project.</p>
+                    
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="partners-box">
+                  <img class="img-circle wow flipInX text-primary" src=" /img/team/img-peter-vessenes.png ">
+                    <h3>Peter Vessenes</h3>
+                    <hr class="discrete">
+                    <h4>Technology</h4>
+                    
+                        <p class="text-muted">Co-founder and former Chairman of the Bitcoin Foundation, known in the community as a formal verification expert and auditor. He has consulted for and advised numerous groups about blockchain technology, including the Department of Treasury, FinCEN and major Venture Capital firms. He recently founded New Alchemy, a software company offering strategy and technology services, who are in charge of TokenCard development.</p>
+                    
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="partners-box">
+                  <img class="img-circle wow flipInX text-primary" src=" /img/team/img-abib-bocresion.png ">
+                    <h3>Abib Bocresion</h3>
+                    <hr class="discrete">
+                    <h4>Business and Finance</h4>
+                    
+                        <p class="text-muted">Former Managing Director and Global Head of Interest Rate Exotics and Hybrids trading at J.P. Morgan. Abib has an academic background in Engineering and Computer Science and Economics and has extensive experience in financial markets. Abib offers insight into the applications of technology to finance, and brings operational experience that helps the team.</p>
+                    
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="partners-box">
+                  <img class="img-circle wow flipInX text-primary" src=" /img/team/img-andreas-glarner.png ">
+                    <h3>Andreas Glarner</h3>
+                    <hr class="discrete">
+                    <h4>Legal Expert</h4>
+                    
+                        <p class="text-muted">Andreas has worked with international companies in the technology, industrial and internet sectors. He has extensive expertise in fintech and blockchain technology applications, gaming services, e-payments and IP/IT law. Legal expert for Monolith Studio.</p>
+                    
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="partners-box">
+                  <img class="img-circle wow flipInX text-primary" src=" /img/team/img-dennis-peterson.png ">
+                    <h3>Dennis Peterson</h3>
+                    <hr class="discrete">
+                    <h4>Senior Solidity Engineer</h4>
+                    
+                        <p class="text-muted">Dennis is a software developer with two decades of experience. Among other projects, he coded rebate and loyalty programs which paid out tens of millions of dollars. Now he&#39;s obsessed with Ethereum, and is the lead Solidity developer at NewAlchemy. He maintains a thought-provoking Ethereum blog, BlunderingCode.</p>
+                    
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="partners-box">
+                  <img class="img-circle wow flipInX text-primary" src=" /img/team/img-paige-freeman.png ">
+                    <h3>Paige Freeman</h3>
+                    <hr class="discrete">
+                    <h4>Chief Marketing Officer and Director of Sales</h4>
+                    
+                        <p class="text-muted">Paige is a well respected leader in the blockchain community most recognized for being at the forefront of merchant adoption of bitcoin. As founding member at Bitpay, she personally signed Tiger Direct, Newegg, Sacramento Kings and thousands of other companies to accept bitcoin as a form of payment. Paige is now Chief Marketing Officer and Director of Sales at New Alchemy, a software company that offers strategy and technology services. Need help with your token launch? Contact her at paige@newalchemy.io.</p>
+                    
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="partners-box">
+                  <img class="img-circle wow flipInX text-primary" src=" /img/team/img-jc-figueroa.png ">
+                    <h3>JC Figueroa</h3>
+                    <hr class="discrete">
+                    <h4>Director of Operations</h4>
+                    
+                        <p class="text-muted">Over the last two decades JC has led many international technology teams on the implementation of variety of projects of all shapes and sizes. His experience includes working with industries in the Media, Gaming and Technology incubation markets. Under his direction, teams of developers, engineers and technicians have solved problems and provided valuable solutions to customers all over the world.</p>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+        
+
+        
+        
+        
+
+
+        
+
+        
+            <!-- INVEST -->
+<section class="" id="invest">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2 text-center">
+				<h2 class="section-heading">Sign-up For News</h2>
+        <h3>Be the first to know…</h3>
+				<hr class="light">
+				
+				<div id="mc_embed_signup">
+					<form action="//ventures.us14.list-manage.com/subscribe/post?u=a08825d6fe73df28f11896631&amp;id=6a483baf08" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+						<div id="form-group mc_embed_signup_scroll">
+							<div class="mc-field-group">
+                <div>
+								  <input type="email" value="" placeholder="Please enter your email address" name="EMAIL" class="required email form-control" id="mce-EMAIL">
+                </div>
+							</div>
+							<div id="mce-responses" class="clear">
+								<div class="response" id="mce-error-response" style="display:none"></div>
+								<div class="response" id="mce-success-response" style="display:none"></div>
+							</div>    
+							<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a08825d6fe73df28f11896631_6a483baf08" tabindex="-1" value=""></div>
+              <br>
+							<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary btn-xl"></div>
+						</div>
+					</form>
+				</div>
+				<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+				
+			</div>
+		</div>
+	</div>
+</section>
+
+        
+
+        
+            <!-- INVEST -->
+<section class="bg-footer" id="invest">
+  <div id="footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 text-center">
+        <p class=""><a href="mailto:hello@tokencard.io">Contact Us</a>&nbsp; | &nbsp;<a class="page-scroll" href="#whitepaper">Whitepaper</a></p>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+        
+
+        
+
+        
+
+        <!-- jQuery -->
+<script src="https://tokencard.io/js/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="https://tokencard.io/js/bootstrap.min.js"></script>
+<!-- Plugin JavaScript -->
+<script src="https://tokencard.io/js/jquery.easing.min.js"></script>
+<script src="https://tokencard.io/js/jquery.fittext.js"></script>
+<script src="https://tokencard.io/js/typed.min.js"></script>
+<script src="https://tokencard.io/js/wow.min.js"></script>
+<!-- TokenCard JavaScript -->
+<script src="https://tokencard.io/js/scripts.js"></script>
+
+
+        
+
+    </body>
+</html>
