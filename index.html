@@ -10,16 +10,16 @@
 <title>TokenCard</title>
 
 <!-- Favicon -->
-<link rel="shortcut icon" href="favicon.ico">
+<link rel="shortcut icon" href="TokenCard.io/favicon.ico">
 <!-- Bootstrap Core CSS -->
-<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="TokenCard.io/css/bootstrap.min.css" type="text/css">
 <!-- Custom Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&amp;subset=latin-ext" rel="stylesheet">
-<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="TokenCard.io/font-awesome/css/font-awesome.min.css" type="text/css">
 <!-- Plugin CSS -->
-<link rel="stylesheet" href="css/animate.min.css" type="text/css">
+<link rel="stylesheet" href="TokenCard.io/css/animate.min.css" type="text/css">
 <!-- Custom CSS -->
-<link rel="stylesheet" href="css/styles.css" type="text/css">
+<link rel="stylesheet" href="TokenCard.io/css/styles.css" type="text/css">
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
@@ -94,14 +94,7 @@ var x = setInterval(function() {
       <div class="navbar-brand page-scroll"><a href="#page-top"></a></div>
 		</div>
 		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" class="navbar-collapse">
-      <div id="nav-set">
-        <ul class="nav navbar-nav navbar-top">
-          <li><a href="/tokencard_whitepaper.pdf"><i class="fa fa-download" aria-hidden="true"></i> Download the Whitepaper</a></li>
-          <li><a href="https://twitter.com/tokencard_io" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
-          <li><a href="https://tokencard-team.herokuapp.com/" target="_blank"><i class="fa fa-slack" aria-hidden="true"></i> Slack</a></li>
-        </ul>
-        </div>
+		<div class="collapse navbar-collapse">
 			  <ul class="nav navbar-nav navbar-bottom">
 			  	<li><a class="page-scroll" href="#whitepaper">The Card</a></li>
 			  	<li>
@@ -114,7 +107,6 @@ var x = setInterval(function() {
 			  	<li>
 			  		<a class="page-scroll" href="#partners">Partners</a>
 			  	</li>
-			  	
 			  	
 			  </ul>
 		</div>
@@ -137,7 +129,7 @@ var x = setInterval(function() {
         
       </div>
       <div id="hdr_img">
-        <img src="/img/tokencard.png">
+        <img src="/img/tokencard-lg.png">
       </div>
 
       <noscript>
@@ -207,8 +199,8 @@ var x = setInterval(function() {
   				
 
          <div id="hdr_link">
-           <span><a href="/tokencard_whitepaper.pdf">Download the Whitepaper &nbsp;<i class="fa fa-file-pdf-o fa-lg" aria-hidden="true"></i></a></span>
-           
+           <span><a href="/tokencard_whitepaper.pdf">Download the <strong>Whitepaper</strong> &nbsp;<i class="fa fa-file-pdf-o fa-lg" aria-hidden="true"></i></a></span>
+           <span><a href="https://tokencard-team.herokuapp.com/"><i class="fa fa-slack fa-lg" aria-hidden="true"></i> &nbsp;Join Us on <strong>Slack</strong></a></span>
          </div>
     </div>
   </div>
@@ -222,26 +214,29 @@ var x = setInterval(function() {
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-8 col-lg-offset-2 text-center">
-				<h2 class="section-heading">TokenCard<sup>&trade;</sup> &ndash; Be Your Own Bank</h2>
-				<hr class="light">
-				<p class="">TokenCard<sup>&trade;</sup>
-				funds VISA debit card swipes with ERC20 tokens you already own while the <a class="page-scroll" href="#app">Token app</a> lets you manage your token finances. They are powered by <a class="page-scroll" href="#TKN">TKN</a>, a new asset-backed token funded by fees from the Token Card network.</p>
-
-				<img class="img-fit cc-shot" src="/img/tokencard.png">
+        <h2 id="tokencard">TokenCard<sup>&trade;</sup></h2>
+        <h3>Smart contracts with VISA<sup>&reg;</sup> payments</h3>
+        <p>Meet <span class="cont-bold">TokenCard<sup><sup>&trade;</sup></span>: A depositless Ethereum token-based debit card &amp; platform with 3 simple elements</p>
+				<img class="img-fit cc-shot" src="/img/tokencard-lg.png">
 				<p>&nbsp;</p>
-				<h3 class="text-primary">Always Control Your Tokens</h3>
-				<p>TokenCard works with any ERC20 Token and any ERC20 Wallet. You never have to deposit tokens.</p>
-
-				<h3 class="text-primary">Mobile App</h3>
-				<p>The Token app: Token Wallet + VISA. <a class="page-scroll" href="#app">Click Here To See The App</a></p>
-
-				<h3 class="text-primary">ATMs Supported</h3>
-				<p>Use any VISA compatible ATM worldwide to turn tokens into cash</p>
-
-				<p> <a href="/tokencard_whitepaper.pdf">Download the Whitepaper</a> &nbsp;<i class="fa fa-file-pdf-o" aria-hidden="true"></i></a> &nbsp;&nbsp;&nbsp;&nbsp;
-			
-
-				</p>
+        <h3>Core Elements</h3>
+        <div class="cont-bullets">
+        <ul>
+          <li>The <span class="cont-bold">Token<sup>&trade;</sup> Contract Wallet:</span> secures users' assets and enforces user-set spending and security parameters.</li>
+        <li>Your physical <span class="cont-bold">TokenCard<sup>&trade;</sup>:</span> connects your Contract Wallet to the VISA&reg; network &mdash; enabling online payments, PoS transactions and ATM withdrawals, using ERC20 tokens in the Token<sup>&trade;</sup> Contract Wallet.</li>
+        <li>The mobile <span class="cont-bold">Token App:</span> neatly unifies the process, offering a clean, intuitive experience and empowering users to finally go bankless, wherever they are.</li>
+        </ul>
+        </div>
+        <h3>TKN</h3>
+        <p class="justleft"><span class="cont-bold">TokenCard<sup>&trade;</sup></span> introduces an underlying ERC20 token, <span class="cont-bold">TKN</span>, holding a pro-rata claim on the <span class="cont-bold">TKN Asset Contract.</span> This Asset Contract accrues a <span class="cont-bold">1% licensing fee</span> (enforced by smart contracts) on all TokenCard transactions. At any time, <span class="cont-bold">TKN</span> holders can redeem their share of the underlying assets by 'cashing and burning' their <span class="cont-bold">TKN</span>.</p>
+        <p class="justleft">Learn more about <span class="cont-bold">TokenCard<sup>&trade;</sup></span> by reading our <i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;<a href="/tokencard_whitepaper.pdf">White Paper</a> and get TKN by joining our <span class="cont-bold">Token Launch Event</span>.</p>
+        <p>&nbsp;</p>
+        <h2>Spend your tokens with TokenCard<sup>&trade;</sup></h2>
+        <hr class="light">
+        <p class="justleft"><span class="cont-bold">Enhancing Every Token</span> &mdash; TokenCard<sup>&trade;</sup> allows you to spend ERC20 tokens at VISA<sup>&reg;</sup> terminals around the world. This is revolutionary: you can buy groceries in DGX, ETH, DAI or any supported tokens. You can even spend multiple tokens in a single transaction, and autonomously maintain a desired portfolio allocation within your Contract Wallet while you do it.</p>
+        <p class="justleft"><span class="cont-bold">Always in Control</span> &mdash; You never have to deposit with us, <span class="cont-bold">ever</span>. Your tokens are secured inside a contract wallet you control. Allowances to enable TokenCard payments are set by <span class="cont-bold">you</span> and can be modified or even revoked at any time by <span class="cont-bold">you</span>.</p>
+        <p class="justleft"><span class="cont-bold">No Compromises </span>&mdash; Traditionally, users are forced to make sacrifices in functionality to gain security, or security for functionality. With TokenCard<sup>&trade;</sup> there is no trade-off. You retain the security and control of a contract wallet while gaining the utility of a global payments network.</p>
+        <p class="justleft"><span class="cont-bold">Expanding the Ecosystem </span>&mdash; The most exciting use-cases for TokenCard<sup>&trade;</sup> are within the markets being explored by other projects in the space. Actively integrating with these platforms gives TKN holders direct access to diversified markets while providing connections to a major payment rail.</p>
 			</div>
 		</div>
 	</div>
@@ -255,24 +250,17 @@ var x = setInterval(function() {
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 text-center">
-        <h2 class="section-heading">Token App: You Need This </h2>
-	<br />
-	<p>
-	Designed for tokens first. Over 1,000 hours of design focused on what modern token holders need.
-	</p>
+        
+        <h2>Your finances just got easier with the Token<sup>&trade;</sup> App</h2>
         <hr class="light">
         <img class="img-fit app-shot" src="/img/tokencard-app1.jpg">
-        <h3 class="text-primary">Review Transactions</h3>
-	<p>See where you spend your tokens by category, recipient and vendor</p>
-        <h3 class="text-primary">Spending Options and Limits</h3>
-	<p>Set spending limits based on percentage of balance, time, tokens or fiat currency limits. 
-	</p>
-        <h3 class="text-primary">Charts and Dashboards</h3>
-	<p>Keep track of changing token values and spending with Token App's charts and graphs.
-	</p>
-
-        <h3 class="text-primary">Safe and Sound</h3>
-	<p>Made a mistake? Don't panic. Freeze a card or recover tokens &mdash; even if you've lost the keys.</p>
+        <h3>The Post Bank Era</h3>
+        <p class="justleft">The mobile Token App<sup>&trade;</sup> eliminates any need for a traditional bank account. You can manage your tokens, review spending activity, and make &amp; request payments all through the App.</p>
+        <p class="justleft"><span class="cont-bold">Wallet Access &mdash; </span> With the Token App<sup>&trade;</sup> you can safely and easily interact with their Contract Wallet. Create innovative spending options based on different parameters and curate your security profile to fit your lifestyle.</p>
+        <p class="justleft"><span class="cont-bold">On the Fly Information </span> &mdash; Whenever a user swipes his card, a transaction entry will simultaneously appear in his Token App<sup>&trade;</sup> displaying business name, establishment type, amount spent (local fiat amount and token), and transaction location using Google Map's API.</p>
+        <p class="justleft"><span class="cont-bold">User Friendly &mdash; </span> Designed as an intuitive experience with top tier UI/UX, the Token App<sup>&trade;</sup> is a product that anyone at any level can quickly use without having to master the underlying technology.</p>
+        <p class="justleft"><span class="cont-bold">Token-to-Token &mdash; </span> Users can re-balance their token portfolio anytime with the in-app token-to-token exchange. No need to withdraw and deposit funds into a centralized exchange! Simply exchange tokens within the Contract Wallet with a click.</p>
+        <p class="justleft"><span class="cont-bold">Fiat-to-Token &mdash; </span> With sufficient liquidity parameters, we'll also provide an in-app fiat-to-token exchange option. This feature allows users new to the token economy with an accessible on-ramp to not only our platform, but to the Ethereum token economy at large.</p>
       </div>
     </div>
   </div>
@@ -285,30 +273,26 @@ var x = setInterval(function() {
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 text-center">
-        <h2 class="section-heading">TKN Overview</h2>
+        <h2 class="section-heading">TKN at a glance</h2>
 	<br />
-	<p>
-	TokenCard and the Token App are powered by TKN, a new ERC20-compliant token being created on May 2, 2017. Read our extensive documentation in <a href=/tokencard_whitepaper.pdf>the whitepaper</a> and in the <a class="page-scroll" href=#summary>Event Summary</a>.
-	
-        <h3 class="text-primary">Limited Number</h3>
-	<p>A fixed number of TKN will be created in exchange for Ether, Tokens and Fiat starting May 2, 2017. </p>
-
-        <h3 class="text-primary">Licensing Fee</h3>
-	<p>TokenCard swipes send 1% of tokens used to back the swipe to the TKN Asset Contract. </p>
-
-        <h3 class="text-primary">Free Swipes</h3>
-	<p>All swipes backed by TKN pay 0% licensing fees.  </p>
-
-        <h3 class="text-primary">TKN is Backed by Tokens</h3>
-	<p>
-	At any time, TKN can be cashed and burned in exchange for a pro-rata share of the tokens held.
-	</p>
-
-        <h3 class="text-primary">Diversification</h3>
-	<p>
-	Over time TKN's Asset Contract will accumulate the most popular tokens in the world.
-	</p>
-
+	      
+        <p>&nbsp;</p>	
+        <h3 class="text-primary">The Ethereum Proxy Asset</h3>
+        <p class="justleft">TKN is a special kind of Ethereum token. It is an asset backed token where the underlying assets represent an accumulation of different ERC20 tokens over time. The underlying assets are secured inside the TKN Asset Contract from which TKN holders can redeem their pro-rata share from.</p>
+        <p>&nbsp;</p> 
+        <h3 class="text-primary">Licensing Fee and TKN Asset Contract</h3>
+        <p class="justleft">Whenever the TokenCard is swiped, the transaction incurs <span class="cont-bold">a 1% licensing fee</span> which <span class="cont-bold">accrues to the TKN Asset Contract</span>. The licensing fee is denominated in the token used, however, <span class="cont-bold">TKN backed swipes don't incur a licensing fee.</span>
+</p>
+        <p>&nbsp;</p> 
+        <h3 class="text-primary">Ethereum Economy Asset</h3>
+        <p class="justleft">Since the TKN Asset Contract accrues licensing fees in the token transacted in, it will eventually equate to a diversified portfolio of the most popular tokens on the Ethereum network. TKN holders effectively have <span class="cont-bold">a passive stake in the growing economy of tokens</span>.
+</p>
+        <p>&nbsp;</p> 
+        <h3 class="text-primary">Cash and Burn</h3>
+        <p class="justleft">TKN holders can invoke a mechanism known as 'Cash and Burn'. Invoking <span class="cont-bold">'Cash and Burn' redeems your pro-rata share of tokens</span> within the TKN Asset Contract, however, this also irrevocably destroys the TKN.</p>
+        <p>&nbsp;</p> 
+        <h3 class="text-primary">To Burn or Not to Burn</h3>
+        <p class="justleft">As holders burn TKN to receive their share of the underlying, they forgo any claim on future accrued licensing fees. This means remaining TKN holders will now having a <span class="cont-bold">larger proportional claim</span> on the TKN Asset Contract.</p>
       </div>
     </div>
   </div>
@@ -352,6 +336,44 @@ var x = setInterval(function() {
 </script>
 
 
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      	<!-- INVEST -->
+<section class="bg-alt" id="invest">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 text-center">
+        <h2 class="section-heading">Add a Contribution</h2>
+        <h3>Your Chance to Invest</h3>
+        <hr class="light">
+        <p class="">Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In malesuada enim in dolor euismod, id commodo mi consectetur. Curabitur at vestibulum nisi. Nullam vehicula nisi velit. Mauris turpis nisl, molestie ut ipsum et, suscipit vehicula odio. Vestibulum interdum vestibulum felis ac molestie.</p>
+        <p>Before you can be a part of the TokenCard launck please be sure to carefully review the following.</p>
+        <hr class="light">
+        <h2 class="text-primary">Contribution Checklist</h2>
+          <div class="contribution-checkbox">
+            <h3>I hereby confirm to have read the following documents:</h3>
+            <input type="checkbox" id="paper" name="paper"><label for="paper">Token Whitepaper</label><br>
+            <input type="checkbox" id="terms" name="terms"><label for="terms">TKN Terms and Conditions</label><br>
+          </div>
+          <div class="contribution-checkbox">
+            <h3> I hereby confirm to be:</h3>
+            <input type="checkbox" id="1" name=""><label for="1">ThisAndThat</label><br>
+            <input type="checkbox" id="2" name=""><label for="2">IfsAndWhens</label><br>
+          </div>
+          <div class="contribution-checkbox">
+            <h3>I hereby understand and acknowledge:</h3>
+            <input type="checkbox" id="noequity" name="noequity"><label for="noequity">Contributor does not receive equity in Monolith Studio GmbH</label><br>
+            <input type="checkbox" id="term" name="term"><label for="term">TKN Terms and Conditions</label><br>
+          </div>
+          <p>&nbsp;</p>
+           <div>
+             <span class="btn-xl btn-inactive">Take me to the investment page</span> 
+           </div>
+        </div>
       </div>
     </div>
   </div>
@@ -518,9 +540,9 @@ var x = setInterval(function() {
                   <img class="img-circle wow flipInX text-primary" src=" /img/team/img-paige-freeman.png ">
                     <h3>Paige Freeman</h3>
                     <hr class="discrete">
-                    <h4>Chief Marketing Officer and Director of Sales</h4>
+                    <h4>Sales and Marketing</h4>
                     
-                        <p class="text-muted">Paige is a well respected leader in the blockchain community most recognized for being at the forefront of merchant adoption of bitcoin. As founding member at Bitpay, she personally signed Tiger Direct, Newegg, Sacramento Kings and thousands of other companies to accept bitcoin as a form of payment. Paige is now Chief Marketing Officer and Director of Sales at New Alchemy, a software company that offers strategy and technology services. Need help with your token launch? Contact her at paige@newalchemy.io.</p>
+                        <p class="text-muted">Paige is a well respected leader in the blockchain community most recognized for being at the forefront of merchant adoption of bitcoin. As founding member at Bitpay, she personally signed Tiger Direct, Newegg, Sacramento Kings and thousands of other companies to accept bitcoin as a form of payment. Paige is now Chief Marketing Officer and Director of Sales at New Alchemy, a software company that offers strategy and technology services. Need help with your token launch? Contact her at hello@newalchemy.io.</p>
                     
                 </div>
             </div>
@@ -544,9 +566,62 @@ var x = setInterval(function() {
         
 
         
-        
-        
+            <!-- CORPORATEPARTNERS -->
+<section id="corppartners">
+  
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">Partner Announcements</h2>
+          <h3>We will be announcing new partners every day</h3>
+          <hr class="light">
+        </div>
+      </div>
+    </div>
+  
+  <div class="container">
+    <div class="row text-center">
+      
+      <div class="col-lg-3 col-md-6" style="height:160px; vertical-align:middle">
+        <div class="partner-box">
+          <img class="corplogo wow fadeInUp" src=" /img/partners/digix-global.png ">
+          <h3></h3>
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-md-6" style="height:160px; vertical-align:middle">
+        <div class="partner-box">
+          <img class="corplogo wow fadeInUp" src=" /img/partners/singular-dtv.png ">
+          <h3></h3>
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-md-6" style="height:160px; vertical-align:middle">
+        <div class="partner-box">
+          <img class="corplogo wow fadeInUp" src=" /img/partners/bitcoinsuisse.png ">
+          <h3></h3>
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-md-6" style="height:160px; vertical-align:middle">
+        <div class="partner-box">
+          <img class="corplogo wow fadeInUp" src=" /img/partners/bittrex-clr.png ">
+          <h3></h3>
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-md-6" style="height:160px; vertical-align:middle">
+        <div class="partner-box">
+          <img class="corplogo wow fadeInUp" src=" /img/partners/mystery.png ">
+          <h3></h3>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
 
+        
 
         
 
@@ -594,9 +669,9 @@ var x = setInterval(function() {
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 text-center">
         <p class=""><a href="mailto:hello@tokencard.io">Contact Us</a>&nbsp; | &nbsp;<a class="page-scroll" href="#whitepaper">Whitepaper</a></p>
-        
-        
-        
+        <p class="social">Stalk Us! &nbsp; <i class="fa fa-twitter" aria-hidden="true"></i>
+          <a href="https://twitter.com/tokencard_io">Twitter</a> &nbsp; | &nbsp; <i class="fa fa-slack" aria-hidden="true"></i>
+          <a href="https://tokencard-team.herokuapp.com/">Slack</a>
       </div>
     </div>
   </div>
@@ -609,16 +684,16 @@ var x = setInterval(function() {
         
 
         <!-- jQuery -->
-<script src="js/jquery.js"></script>
+<script src="TokenCard.io/js/jquery.js"></script>
 <!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+<script src="TokenCard.io/js/bootstrap.min.js"></script>
 <!-- Plugin JavaScript -->
-<script src="js/jquery.easing.min.js"></script>
-<script src="js/jquery.fittext.js"></script>
-<script src="js/typed.min.js"></script>
-<script src="js/wow.min.js"></script>
+<script src="TokenCard.io/js/jquery.easing.min.js"></script>
+<script src="TokenCard.io/js/jquery.fittext.js"></script>
+<script src="TokenCard.io/js/typed.min.js"></script>
+<script src="TokenCard.io/js/wow.min.js"></script>
 <!-- TokenCard JavaScript -->
-<script src="js/scripts.js"></script>
+<script src="TokenCard.io/js/scripts.js"></script>
 
 
         
