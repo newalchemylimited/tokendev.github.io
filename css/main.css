@@ -1656,7 +1656,9 @@ img.app-demo-img-3 {
       padding-right: 24px;
       margin: 0px; } }
   .etherium-address-info pre {
-    width: 100%; }
+    width: 100%;
+    background-color: #eef2ff;
+    border: 1px solid #91aaff; }
   .etherium-address-info ul {
     margin: -30px 0 80px 0;
     line-height: 1.4em; }
