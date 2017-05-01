@@ -268,7 +268,7 @@ $(document).ready(function() {
 	});
 
 	// countdown YYYY/MM/DD hh:mm:ss
-	$('#countdown-contain').countdown('2017/05/02 16:00:00').on('update.countdown', function(event) {
+	$('#countdown-contain').countdown('2017/05/02 10:00:00').on('update.countdown', function(event) {
 		var $this = $(this).html(event.strftime(''
 	    + '<div class="countdown-component"> <div class="countdown-value">%-d</div> <div class="countdown-label">Day%!d</div> </div>'
 	    + '<div class="countdown-component"> <div class="countdown-value">%-H</div> <div class="countdown-label">Hours</div> </div>'
