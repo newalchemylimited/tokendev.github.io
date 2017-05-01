@@ -1640,6 +1640,48 @@ img.app-demo-img-3 {
       padding-right: 24px;
       margin: 0px; } }
 
+.etherium-address-info {
+  position: relative;
+  padding-left: 36px;
+  padding-right: 36px; }
+  @media screen and (max-width: 700px) {
+    .etherium-address-info {
+      padding-right: 50px; } }
+  @media screen and (max-width: 560px) {
+    .etherium-address-info {
+      padding-left: 50px; } }
+  @media screen and (max-width: 500px) {
+    .etherium-address-info {
+      padding-left: 24px;
+      padding-right: 24px;
+      margin: 0px; } }
+  .etherium-address-info h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 65px;
+    padding-left: 50px; }
+    @media screen and (max-width: 560px) {
+      .etherium-address-info h1 {
+        font-size: 32px; } }
+    @media screen and (max-width: 500px) {
+      .etherium-address-info h1 {
+        padding-left: 24px;
+        padding-right: 24px;
+        margin: 0px; } }
+  .etherium-address-info pre {
+    width: 100%;
+    background-color: #eef2ff;
+    border: 1px solid #91aaff; }
+  .etherium-address-info ul {
+    margin: -30px 0 80px 0;
+    line-height: 1.6em; }
+  .etherium-address-info li {
+    padding-bottom: 18px;
+    list-style-type: none;
+    list-style-type: circle; }
+
 .confirm-btn {
   background-color: #577DFE;
   height: 55px;
