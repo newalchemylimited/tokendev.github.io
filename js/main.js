@@ -214,7 +214,7 @@ $(document).ready(function() {
 	// console.log(contractInstanceICO);
 	// console.log(web3._extend.utils.fromWei(web3._extend.utils.toDecimal(web3.eth.getBalance('0xde874113cde4156f962fc1c240ffbe5cfe60f943'))));
 
-	var raisedETH = contractInstanceICO.raised ? contractInstanceICO.raised.call() : 1234;
+	var raisedETH = contractInstanceICO.raised ? contractInstanceICO.raised.call() : 0;
 	var raisedREP = contractInstanceICO.raisedFromToken.call('0x48c80F1f4D53D5951e5D5438B54Cba84f29F32a5').toNumber();
 	var raisedDGD = contractInstanceICO.raisedFromToken.call('0xe0b7927c4af23765cb51314a0e0521a9645f0e2a').toNumber();
 	var raisedGNT = contractInstanceICO.raisedFromToken.call('0xa74476443119A942dE498590Fe1f2454d7D4aC0d').toNumber();
