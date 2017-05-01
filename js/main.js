@@ -104,6 +104,66 @@ $(document).ready(function() {
 	var sectionTooltips = ['Token', 'The Card', 'TKN Creation Event', 'The App', 'Contribute', 'Vision' ];
 	var chartIds = ['chartETH', 'chartREP', 'chartDGD', 'chartGNT', 'chartMLN', 'chartSWT', 'chartMKR', 'chartSNGLS'];
 
+	// START Web3 data connection
+	var web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/zlxHErsCk0K9XtxyUguc"));
+	const abiICO = [{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"raisedFromToken","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_token","type":"address"}],"name":"setToken","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_a","type":"address"}],"name":"setAllStopper","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"currTime","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"newPayee","type":"address"}],"name":"changePayee","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"currSaleActive","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_for","type":"address"},{"name":"_token","type":"address"},{"name":"_ethValue","type":"uint256"},{"name":"_depositedTokens","type":"uint256"},{"name":"_reference","type":"bytes32"}],"name":"depositTokens","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"allStart","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"currSaleComplete","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"sale","type":"address"}],"name":"addSale","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"claim","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"salenum","type":"uint256"}],"name":"claimableOwnerEth","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"claimableRefund","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_a","type":"address"},{"name":"_amt","type":"uint256"}],"name":"emergencyRefund","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_token","type":"address"},{"name":"_to","type":"address"}],"name":"transferTokens","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"weiPerEth","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"a","type":"address"}],"name":"claimableRefund","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"salenum","type":"uint256"}],"name":"numContributors","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"acceptOwnership","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"t","type":"uint256"}],"name":"setFakeTime","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"a","type":"address"}],"name":"claimableTokens","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"testing","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"m","type":"uint256"}],"name":"addMinutes","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_controller","type":"address"}],"name":"setController","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"setAsTest","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"numSales","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"raisedFromFiat","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"salenum","type":"uint256"}],"name":"claimOwnerEth","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_newOwner","type":"address"}],"name":"changeOwner","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"withdrawTopUp","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"payee","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"}],"name":"claimFor","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"sales","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"claimableTokens","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"tokensPerEth","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"","type":"bytes32"}],"name":"mintRefs","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"nextClaim","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"deposit","outputs":[],"payable":true,"type":"function"},{"constant":false,"inputs":[{"name":"d","type":"uint256"}],"name":"addDays","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"topUp","outputs":[],"payable":true,"type":"function"},{"constant":true,"inputs":[],"name":"topUpAmount","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"getCurrSale","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"allStop","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_for","type":"address"},{"name":"_ethValue","type":"uint256"},{"name":"_reference","type":"bytes32"}],"name":"depositFiat","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"sale","type":"address"},{"name":"minimumPurchase","type":"uint256"}],"name":"addSale","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"raised","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"controller","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"token","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"inputs":[],"payable":false,"type":"constructor"},{"payable":true,"type":"fallback"},{"anonymous":false,"inputs":[{"indexed":true,"name":"purchaser","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"logPurchase","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"purchaser","type":"address"},{"indexed":true,"name":"token","type":"address"},{"indexed":false,"name":"depositedTokens","type":"uint256"},{"indexed":false,"name":"ethValue","type":"uint256"},{"indexed":false,"name":"_reference","type":"bytes32"}],"name":"logPurchaseViaToken","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"purchaser","type":"address"},{"indexed":false,"name":"ethValue","type":"uint256"},{"indexed":false,"name":"_reference","type":"bytes32"}],"name":"logPurchaseViaFiat","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"token","type":"address"},{"indexed":false,"name":"to","type":"address"},{"indexed":false,"name":"amount","type":"uint256"}],"name":"logTokenTransfer","type":"event"},{"anonymous":false,"inputs":[],"name":"logAllStop","type":"event"},{"anonymous":false,"inputs":[],"name":"logAllStart","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"startTime","type":"uint256"},{"indexed":false,"name":"stopTime","type":"uint256"}],"name":"logSaleStart","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"purchaser","type":"address"},{"indexed":false,"name":"refund","type":"uint256"},{"indexed":false,"name":"tokens","type":"uint256"}],"name":"logClaim","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"owner","type":"address"},{"indexed":true,"name":"spender","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Approval","type":"event"}];
+	var contractICO = web3.eth.contract(abiICO);
+	var contractInstanceICO = contractICO.at('0x2235a7b77308c5631a33e83b5b7cb06b0092311d');
+	// console.log(contractInstanceICO);
+	// console.log(web3._extend.utils.fromWei(web3._extend.utils.toDecimal(web3.eth.getBalance('0xde874113cde4156f962fc1c240ffbe5cfe60f943'))));
+	var weiPerEth = contractInstanceICO.weiPerEth.call();
+
+	var raisedETH = contractInstanceICO.raised.call()/weiPerEth;
+	var raisedUSD = (raisedETH*75).toFixed();
+	var raisedREP = (contractInstanceICO.raisedFromToken.call('0x48c80F1f4D53D5951e5D5438B54Cba84f29F32a5').toNumber()/weiPerEth*16).toFixed();
+	var raisedDGD = (contractInstanceICO.raisedFromToken.call('0xe0b7927c4af23765cb51314a0e0521a9645f0e2a').toNumber()/weiPerEth*27.5).toFixed();
+	var raisedGNT = (contractInstanceICO.raisedFromToken.call('0xa74476443119A942dE498590Fe1f2454d7D4aC0d').toNumber()/weiPerEth*.22).toFixed();
+	var raisedMLN = (contractInstanceICO.raisedFromToken.call('0xBEB9eF514a379B997e0798FDcC901Ee474B6D9A1').toNumber()/weiPerEth*36.4).toFixed();
+	var raisedSWT = (contractInstanceICO.raisedFromToken.call('0xb9e7f8568e08d5659f5d29c4997173d84cdf2607').toNumber()/weiPerEth*1.35).toFixed();
+	var raisedMKR = (contractInstanceICO.raisedFromToken.call('0xc66ea802717bfb9833400264dd12c2bceaa34a6d').toNumber()/weiPerEth*85.8).toFixed();
+	var raisedSNGLS = (contractInstanceICO.raisedFromToken.call('0xaec2e87e0a235266d9c5adc9deb4b2e29b54d009').toNumber()/weiPerEth*13.8).toFixed();
+
+	const ETH_CAP = 65000;
+	const REP_CAP = 50000;
+	const DGD_CAP = 10000;
+	const GNT_CAP = 2750000;
+	const MLN_CAP = 5000;
+	const SWT_CAP = 70000;
+	const MKR_CAP = 3500;
+	const SNGLS_CAP = 3500000;
+
+	var remainingETH = raisedETH <= ETH_CAP ? ETH_CAP - raisedETH : 0;
+	var remainingREP = raisedREP <= REP_CAP ? REP_CAP - raisedREP : 0;
+	var remainingDGD = raisedDGD <= DGD_CAP ? DGD_CAP - raisedDGD : 0;
+	var remainingGNT = raisedGNT <= GNT_CAP ? GNT_CAP - raisedGNT : 0;
+	var remainingMLN = raisedMLN <= MLN_CAP ? MLN_CAP - raisedMLN : 0;
+	var remainingSWT = raisedSWT <= SWT_CAP ? SWT_CAP - raisedSWT : 0;
+	var remainingMKR = raisedMKR <= MKR_CAP ? MKR_CAP - raisedMKR : 0;
+	var remainingSNGLS = raisedSNGLS <= SNGLS_CAP ? SNGLS_CAP - raisedSNGLS : 0;
+
+	var tokenAmts = {
+		'chartETH': [raisedETH, remainingETH],
+		'chartREP': [raisedREP, remainingREP],
+		'chartDGD': [raisedDGD, remainingDGD],
+		'chartGNT': [raisedGNT, remainingGNT],
+		'chartMLN': [raisedMLN, remainingMLN],
+		'chartSWT': [raisedSWT, remainingSWT],
+		'chartMKR': [raisedMKR, remainingMKR],
+		'chartSNGLS': [raisedSNGLS, remainingSNGLS]
+	};
+
+	$('#raised-ETH').html(tokenAmts.chartETH[0]);
+	$('#raised-REP').html(tokenAmts.chartREP[0]);
+	$('#raised-DGD').html(tokenAmts.chartDGD[0]);
+	$('#raised-GNT').html(tokenAmts.chartGNT[0]);
+	$('#raised-MLN').html(tokenAmts.chartMLN[0]);
+	$('#raised-SWT').html(tokenAmts.chartSWT[0]);
+	$('#raised-MKR').html(tokenAmts.chartMKR[0]);
+	$('#raised-SNGLS').html(tokenAmts.chartSNGLS[0]);
+
+	$('#usd-raised').html(raisedUSD);
+	// END Web3 data connection
+
 	function handleOnLeave(index, nextIndex, direction){
 		// console.log('index:' + index)
 		// console.log('nextIndex:' + nextIndex);
@@ -205,63 +265,6 @@ $(document).ready(function() {
 	$(".video-preview-overlay").modalVideo({channel:'vimeo'});
 
 	var chartIds = ['chartETH', 'chartREP', 'chartDGD', 'chartGNT', 'chartMLN', 'chartSWT', 'chartMKR', 'chartSNGLS'];
-
-	// START Web3 data connection
-	var web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/zlxHErsCk0K9XtxyUguc "));
-	const abiICO = JSON.parse('[{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"raisedFromToken","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_token","type":"address"}],"name":"setToken","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_a","type":"address"}],"name":"setAllStopper","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"currTime","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"newPayee","type":"address"}],"name":"changePayee","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"currSaleActive","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_for","type":"address"},{"name":"_token","type":"address"},{"name":"_ethValue","type":"uint256"},{"name":"_depositedTokens","type":"uint256"},{"name":"_reference","type":"bytes32"}],"name":"depositTokens","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"allStart","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"currSaleComplete","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"sale","type":"address"}],"name":"addSale","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"claim","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"salenum","type":"uint256"}],"name":"claimableOwnerEth","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"claimableRefund","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_a","type":"address"},{"name":"_amt","type":"uint256"}],"name":"emergencyRefund","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_token","type":"address"},{"name":"_to","type":"address"}],"name":"transferTokens","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"weiPerEth","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"a","type":"address"}],"name":"claimableRefund","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"salenum","type":"uint256"}],"name":"numContributors","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"t","type":"uint256"}],"name":"setFakeTime","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"a","type":"address"}],"name":"claimableTokens","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"testing","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"m","type":"uint256"}],"name":"addMinutes","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_controller","type":"address"}],"name":"setController","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"setAsTest","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"numSales","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"raisedFromFiat","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"salenum","type":"uint256"}],"name":"claimOwnerEth","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"newOwner","type":"address"}],"name":"changeOwner","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"withdrawTopUp","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"payee","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"}],"name":"claimFor","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"sales","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"claimableTokens","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"","type":"bytes32"}],"name":"mintRefs","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"nextClaim","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"deposit","outputs":[],"payable":true,"type":"function"},{"constant":false,"inputs":[{"name":"d","type":"uint256"}],"name":"addDays","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"topUp","outputs":[],"payable":true,"type":"function"},{"constant":true,"inputs":[],"name":"topUpAmount","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"getCurrSale","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"allStop","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_for","type":"address"},{"name":"_ethValue","type":"uint256"},{"name":"_reference","type":"bytes32"}],"name":"depositFiat","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"sale","type":"address"},{"name":"minimumPurchase","type":"uint256"}],"name":"addSale","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"controller","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"token","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"inputs":[],"payable":false,"type":"constructor"},{"payable":true,"type":"fallback"},{"anonymous":false,"inputs":[{"indexed":true,"name":"purchaser","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"logPurchase","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"purchaser","type":"address"},{"indexed":true,"name":"token","type":"address"},{"indexed":false,"name":"depositedTokens","type":"uint256"},{"indexed":false,"name":"ethValue","type":"uint256"},{"indexed":false,"name":"_reference","type":"bytes32"}],"name":"logPurchaseViaToken","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"purchaser","type":"address"},{"indexed":false,"name":"ethValue","type":"uint256"},{"indexed":false,"name":"_reference","type":"bytes32"}],"name":"logPurchaseViaFiat","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"token","type":"address"},{"indexed":false,"name":"to","type":"address"},{"indexed":false,"name":"amount","type":"uint256"}],"name":"logTokenTransfer","type":"event"},{"anonymous":false,"inputs":[],"name":"logAllStop","type":"event"},{"anonymous":false,"inputs":[],"name":"logAllStart","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"startTime","type":"uint256"},{"indexed":false,"name":"stopTime","type":"uint256"}],"name":"logSaleStart","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"purchaser","type":"address"},{"indexed":false,"name":"refund","type":"uint256"},{"indexed":false,"name":"tokens","type":"uint256"}],"name":"logClaim","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"owner","type":"address"},{"indexed":true,"name":"spender","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Approval","type":"event"}]');
-	var contractICO = web3.eth.contract(abiICO);
-	var contractInstanceICO = contractICO.at('0x2d08c908a116b710ccdbf9842a91335b6eee6d0b');
-	// console.log(contractInstanceICO);
-	// console.log(web3._extend.utils.fromWei(web3._extend.utils.toDecimal(web3.eth.getBalance('0xde874113cde4156f962fc1c240ffbe5cfe60f943'))));
-
-	var raisedETH = contractInstanceICO.raised ? contractInstanceICO.raised.call() : 0;
-	var raisedREP = contractInstanceICO.raisedFromToken.call('0x48c80F1f4D53D5951e5D5438B54Cba84f29F32a5').toNumber();
-	var raisedDGD = contractInstanceICO.raisedFromToken.call('0xe0b7927c4af23765cb51314a0e0521a9645f0e2a').toNumber();
-	var raisedGNT = contractInstanceICO.raisedFromToken.call('0xa74476443119A942dE498590Fe1f2454d7D4aC0d').toNumber();
-	var raisedMLN = contractInstanceICO.raisedFromToken.call('0xBEB9eF514a379B997e0798FDcC901Ee474B6D9A1').toNumber();
-	var raisedSWT = contractInstanceICO.raisedFromToken.call('0xb9e7f8568e08d5659f5d29c4997173d84cdf2607').toNumber();
-	var raisedMKR = contractInstanceICO.raisedFromToken.call('0xc66ea802717bfb9833400264dd12c2bceaa34a6d').toNumber();
-	var raisedSNGLS = contractInstanceICO.raisedFromToken.call('0xaec2e87e0a235266d9c5adc9deb4b2e29b54d009').toNumber();
-
-	const ETH_CAP = 65000;
-	const REP_CAP = 50000;
-	const DGD_CAP = 10000;
-	const GNT_CAP = 2750000;
-	const MLN_CAP = 5000;
-	const SWT_CAP = 70000;
-	const MKR_CAP = 3500;
-	const SNGLS_CAP = 3500000;
-
-	var remainingETH = raisedETH <= ETH_CAP ? ETH_CAP - raisedETH : 0;
-	var remainingREP = raisedREP <= REP_CAP ? REP_CAP - raisedREP : 0;
-	var remainingDGD = raisedDGD <= DGD_CAP ? DGD_CAP - raisedDGD : 0;
-	var remainingGNT = raisedGNT <= GNT_CAP ? GNT_CAP - raisedGNT : 0;
-	var remainingMLN = raisedMLN <= MLN_CAP ? MLN_CAP - raisedMLN : 0;
-	var remainingSWT = raisedSWT <= SWT_CAP ? SWT_CAP - raisedSWT : 0;
-	var remainingMKR = raisedMKR <= MKR_CAP ? MKR_CAP - raisedMKR : 0;
-	var remainingSNGLS = raisedSNGLS <= SNGLS_CAP ? SNGLS_CAP - raisedSNGLS : 0;
-
-	var tokenAmts = {
-		'chartETH': [raisedETH, remainingETH],
-		'chartREP': [raisedREP, remainingREP],
-		'chartDGD': [raisedDGD, remainingDGD],
-		'chartGNT': [raisedGNT, remainingGNT],
-		'chartMLN': [raisedMLN, remainingMLN],
-		'chartSWT': [raisedSWT, remainingSWT],
-		'chartMKR': [raisedMKR, remainingMKR],
-		'chartSNGLS': [raisedSNGLS, remainingSNGLS]
-	};
-
-	$('#raised-ETH').html(tokenAmts.chartETH[0]);
-	$('#raised-REP').html(tokenAmts.chartREP[0]);
-	$('#raised-DGD').html(tokenAmts.chartDGD[0]);
-	$('#raised-GNT').html(tokenAmts.chartGNT[0]);
-	$('#raised-MLN').html(tokenAmts.chartMLN[0]);
-	$('#raised-SWT').html(tokenAmts.chartSWT[0]);
-	$('#raised-MKR').html(tokenAmts.chartMKR[0]);
-	$('#raised-SNGLS').html(tokenAmts.chartSNGLS[0]);
-
-	// END Web3 data connection
 
 	_.each(chartIds, function(chartId, index){
 		createChartForId(chartId, index, tokenAmts);
