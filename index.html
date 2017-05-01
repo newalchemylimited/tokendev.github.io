@@ -72,61 +72,61 @@
                         </div>
                         <div id="countdown-contain"></div>
                     </div>
-                    <div class="charts-container ">
+                    <div class="charts-container">
                     <div class="chart-contain">
-                        <canvas class="doughnut-chart" id="chartOne" width="400" height="400"></canvas>
+                        <canvas class="doughnut-chart" id="chartETH" width="400" height="400"></canvas>
                         <div class="chart-label-contain">
                             <div class="chart-label">ETH</div>
-                            <div class="chart-label-count">10.6k / 45k</div>
+                            <div class="chart-label-count"><span id="raised-ETH">0</span> / 65k</div>
                         </div>
                     </div>
                     <div class="chart-contain">
-                        <canvas class="doughnut-chart" id="chartTwo" width="400" height="400"></canvas>
+                        <canvas class="doughnut-chart" id="chartREP" width="400" height="400"></canvas>
                         <div class="chart-label-contain">
                             <div class="chart-label">REP</div>
-                            <div class="chart-label-count">10.5k / 45k</div>
+                            <div class="chart-label-count"><span id="raised-REP">0</span> / 50k</div>
                         </div>
                     </div>
                     <div class="chart-contain">
-                        <canvas class="doughnut-chart" id="chartThree" width="400" height="400"></canvas>
+                        <canvas class="doughnut-chart" id="chartDGD" width="400" height="400"></canvas>
                         <div class="chart-label-contain">
                             <div class="chart-label">DGD</div>
-                            <div class="chart-label-count">10.5k / 45k</div>
+                            <div class="chart-label-count"><span id="raised-DGD">0</span> / 10k</div>
                         </div>
                     </div>
                     <div class="chart-contain">
-                        <canvas class="doughnut-chart" id="chartFour" width="400" height="400"></canvas>
+                        <canvas class="doughnut-chart" id="chartGNT" width="400" height="400"></canvas>
                         <div class="chart-label-contain">
                             <div class="chart-label">GNT</div>
-                            <div class="chart-label-count">10.5k / 45k</div>
+                            <div class="chart-label-count"><span id="raised-GNT">0</span> / 2.75M</div>
                         </div>
                     </div>
                     <div class="chart-contain">
-                        <canvas class="doughnut-chart" id="chartFive" width="400" height="400"></canvas>
+                        <canvas class="doughnut-chart" id="chartMLN" width="400" height="400"></canvas>
                         <div class="chart-label-contain">
                             <div class="chart-label">MLN</div>
-                            <div class="chart-label-count">10.5k / 45k</div>
+                            <div class="chart-label-count"><span id="raised-MLN">0</span> / 5k</div>
                         </div>
                     </div>
                     <div class="chart-contain">
-                        <canvas class="doughnut-chart" id="chartSix" width="400" height="400"></canvas>
+                        <canvas class="doughnut-chart" id="chartSWT" width="400" height="400"></canvas>
                         <div class="chart-label-contain">
-                            <div class="chart-label">ICN</div>
-                            <div class="chart-label-count">10.5k / 45k</div>
+                            <div class="chart-label">SWT</div>
+                            <div class="chart-label-count"><span id="raised-SWT">0</span> / 70k</div>
                         </div>
                     </div>
                     <div class="chart-contain">
-                        <canvas class="doughnut-chart" id="chartSeven" width="400" height="400"></canvas>
+                        <canvas class="doughnut-chart" id="chartMKR" width="400" height="400"></canvas>
                         <div class="chart-label-contain">
-                            <div class="chart-label">1ST</div>
-                            <div class="chart-label-count">10.5k / 45k</div>
+                            <div class="chart-label">MKR</div>
+                            <div class="chart-label-count"><span id="raised-MKR">0</span> / 3.5k</div>
                         </div>
                     </div>
                     <div class="chart-contain">
-                        <canvas class="doughnut-chart" id="chartEight" width="400" height="400"></canvas>
+                        <canvas class="doughnut-chart" id="chartSNGLS" width="400" height="400"></canvas>
                         <div class="chart-label-contain">
                             <div class="chart-label">SNGLS</div>
-                            <div class="chart-label-count">10.5k / 45k</div>
+                            <div class="chart-label-count"><span id="raised-SNGLS">0</span> / 3.5M</div>
                         </div>
                     </div>
                     </div>
@@ -197,19 +197,19 @@
                         <div class="section-subhead-vert">Confirmation Checklist</div>
                         <p><b>I hereby confirm to have read and understood the following&nbsp;documents:</b>&nbsp;</p>
                         <div class="form-input">
-                            <input class="confirm-checkbox" type="checkbox" id="terms" name="terms" value="terms">
+                            <input class="confirm-checkbox" type="checkbox" id="terms" name="terms" value="terms" disabled>
                             <label class="confirm-checkbox-label" for="terms">
                                 I agree to <a href="#">TokenCard Contribution Terms</a>
                             </label>
                         </div>
                         <div class="form-input">
-                            <input class="confirm-checkbox" type="checkbox" id="whitepaper" name="whitepaper" value="whitepaper">
+                            <input class="confirm-checkbox" type="checkbox" id="whitepaper" name="whitepaper" value="whitepaper" disabled>
                             <label class="confirm-checkbox-label" for="whitepaper">
                                 I have read the <a href="tokencard_whitepaper.pdf" download>TokenCard Whitepaper</a>
                             </label>
                         </div>
                         <div class="form-input">
-                            <input class="confirm-checkbox" type="checkbox" id="nonus" name="nonus" value="nonus">
+                            <input class="confirm-checkbox" type="checkbox" id="nonus" name="nonus" value="nonus" disabled>
                             <label class="confirm-checkbox-label" for="nonus">
                                 I confirm that I am a non US citizen, nor am I signing on behalf of a US citizen.
                             </label>
@@ -278,6 +278,7 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
+        <script type="text/javascript" src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>
