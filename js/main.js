@@ -161,8 +161,8 @@ $(document).ready(function() {
 
 	$('#fullpage').fullpage({
 		offsetSections: true,
-		offsetSectionsKey: 'bmdyb2suaW9faHAxYjJabWMyVjBVMlZqZEdsdmJuTT1JejQ=',  // this one is for dev purposes for use on ngrok.io
-		// offsetSectionsKey: 'dG9rZW5jYXJkLmlvX0lLV2IyWm1jMlYwVTJWamRHbHZibk09cEEw', //this is the real activationkey for this extention for use with the tokencard.io domain name
+		//offsetSectionsKey: 'bmdyb2suaW9faHAxYjJabWMyVjBVMlZqZEdsdmJuTT1JejQ=',  // this one is for dev purposes for use on ngrok.io
+		offsetSectionsKey: 'dG9rZW5jYXJkLmlvX0lLV2IyWm1jMlYwVTJWamRHbHZibk09cEEw', //this is the real activationkey for this extention for use with the tokencard.io domain name
 		menu: '#menu',
 		anchors: sectionAnchors,
 		navigation: false,
