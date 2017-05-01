@@ -114,43 +114,6 @@ $(document).ready(function() {
 	var contractToken = web3.eth.contract(abiToken);
 	var contractInstanceToken = contractToken.at('0x0e898b8ae39ae33ae810069a0a6b562455d4f43c');
 
-	const weiPerEth = contractInstanceICO.weiPerEth.call();
-
-	var raisedETH = contractInstanceICO.raised.call()/weiPerEth;
-	var raisedFiat = contractInstanceICO.raisedFromFiat.call().toNumber();
-	var raisedREP = contractInstanceICO.raisedFromToken.call('0x48c80F1f4D53D5951e5D5438B54Cba84f29F32a5').toNumber()/weiPerEth*16;
-	var raisedDGD = contractInstanceICO.raisedFromToken.call('0xe0b7927c4af23765cb51314a0e0521a9645f0e2a').toNumber()/weiPerEth*27.5;
-	var raisedGNT = contractInstanceICO.raisedFromToken.call('0xa74476443119A942dE498590Fe1f2454d7D4aC0d').toNumber()/weiPerEth*.22;
-	var raisedMLN = contractInstanceICO.raisedFromToken.call('0xBEB9eF514a379B997e0798FDcC901Ee474B6D9A1').toNumber()/weiPerEth*36.4;
-	var raisedSWT = contractInstanceICO.raisedFromToken.call('0xb9e7f8568e08d5659f5d29c4997173d84cdf2607').toNumber()/weiPerEth*1.35;
-	var raisedMKR = contractInstanceICO.raisedFromToken.call('0xc66ea802717bfb9833400264dd12c2bceaa34a6d').toNumber()/weiPerEth*85.8;
-	var raisedSNGLS = contractInstanceICO.raisedFromToken.call('0xaec2e87e0a235266d9c5adc9deb4b2e29b54d009').toNumber()/weiPerEth*13.8;
-
-	var raisedETHp = numeral(raisedETH).format('0.0a');
-	var raisedFiatp = numeral(raisedFiat).format('0.0a');
-	var raisedREPp = numeral(raisedREP).format('0.0a');
-	var raisedDGDp = numeral(raisedDGD).format('0.0a');
-	var raisedGNTp = numeral(raisedGNT).format('0.0a');
-	var raisedMLNp = numeral(raisedMLN).format('0.0a');
-	var raisedSWTp = numeral(raisedSWT).format('0.0a');
-	var raisedMKRp = numeral(raisedMKR).format('0.0a');
-	var raisedSNGLSp = numeral(raisedSNGLS).format('0.0a');
-
-	var numberContributors = contractInstanceICO.numContributors.call().toNumber();
-	var numMVP = numberContributors <= 500 ? numberContributors : 500;
-
-	var tknCreated = contractInstanceToken.totalSupply.call().toNumber()/100000000;
-	var tknCreatedp = numeral(tknCreated).format('0.0a');
-
-	var tknDollarAmount = ((raisedREP * 16) + (raisedDGD * 27.5) + (raisedGNT * .22) + (raisedMLN * 36.4) + (raisedSWT * 1.35) + (raisedMKR * 85.8) + (raisedSNGLS * 13.8));
-	console.log('raised in ETH =', raisedETH * 75);
-	console.log('raised in Fiat =', raisedFiat);
-	console.log('raised in Tokens =', tknDollarAmount);
-
-	var raisedUSD = ((raisedETH * 75) + raisedFiat + tknDollarAmount);
-	var raisedUSDp = numeral(raisedUSD).format('0.0a');
-	var tknPerETH = (raisedETH + raisedFiat + tknDollarAmount) <= 750000 ? 150 : 100;
-
 	const ETH_CAP = 65000;
 	const REP_CAP = 50000;
 	const DGD_CAP = 10000;
@@ -160,6 +123,34 @@ $(document).ready(function() {
 	const MKR_CAP = 3500;
 	const SNGLS_CAP = 3500000;
 
+	// **** Set variable values outside of loop
+	var weiPerEth = contractInstanceICO.weiPerEth.call();
+	var raisedETH = contractInstanceICO.raised.call()/weiPerEth;
+	var raisedFiat = contractInstanceICO.raisedFromFiat.call().toNumber();
+	var raisedREP = contractInstanceICO.raisedFromToken.call('0x48c80F1f4D53D5951e5D5438B54Cba84f29F32a5').toNumber()/weiPerEth*16;
+	var raisedDGD = contractInstanceICO.raisedFromToken.call('0xe0b7927c4af23765cb51314a0e0521a9645f0e2a').toNumber()/weiPerEth*27.5;
+	var raisedGNT = contractInstanceICO.raisedFromToken.call('0xa74476443119A942dE498590Fe1f2454d7D4aC0d').toNumber()/weiPerEth*.22;
+	var raisedMLN = contractInstanceICO.raisedFromToken.call('0xBEB9eF514a379B997e0798FDcC901Ee474B6D9A1').toNumber()/weiPerEth*36.4;
+	var raisedSWT = contractInstanceICO.raisedFromToken.call('0xb9e7f8568e08d5659f5d29c4997173d84cdf2607').toNumber()/weiPerEth*1.35;
+	var raisedMKR = contractInstanceICO.raisedFromToken.call('0xc66ea802717bfb9833400264dd12c2bceaa34a6d').toNumber()/weiPerEth*85.8;
+	var raisedSNGLS = contractInstanceICO.raisedFromToken.call('0xaec2e87e0a235266d9c5adc9deb4b2e29b54d009').toNumber()/weiPerEth*13.8;
+	var raisedETHp = numeral(raisedETH).format('0.0a');
+	var raisedFiatp = numeral(raisedFiat).format('0.0a');
+	var raisedREPp = numeral(raisedREP).format('0.0a');
+	var raisedDGDp = numeral(raisedDGD).format('0.0a');
+	var raisedGNTp = numeral(raisedGNT).format('0.0a');
+	var raisedMLNp = numeral(raisedMLN).format('0.0a');
+	var raisedSWTp = numeral(raisedSWT).format('0.0a');
+	var raisedMKRp = numeral(raisedMKR).format('0.0a');
+	var raisedSNGLSp = numeral(raisedSNGLS).format('0.0a');
+	var numberContributors = contractInstanceICO.numContributors.call().toNumber();
+	var numMVP = numberContributors <= 500 ? numberContributors : 500;
+	var tknCreated = contractInstanceToken.totalSupply.call().toNumber()/100000000;
+	var tknCreatedp = numeral(tknCreated).format('0.0a');
+	var tknDollarAmount = ((raisedREP * 16) + (raisedDGD * 27.5) + (raisedGNT * .22) + (raisedMLN * 36.4) + (raisedSWT * 1.35) + (raisedMKR * 85.8) + (raisedSNGLS * 13.8));
+	var raisedUSD = ((raisedETH * 75) + raisedFiat + tknDollarAmount);
+	var raisedUSDp = numeral(raisedUSD).format('0.0a');
+	var tknPerETH = (raisedETH + raisedFiat + tknDollarAmount) <= 750000 ? 150 : 100;
 	var remainingETH = raisedETH <= ETH_CAP ? ETH_CAP - raisedETH : 0;
 	var remainingREP = raisedREP <= REP_CAP ? REP_CAP - raisedREP : 0;
 	var remainingDGD = raisedDGD <= DGD_CAP ? DGD_CAP - raisedDGD : 0;
@@ -168,18 +159,7 @@ $(document).ready(function() {
 	var remainingSWT = raisedSWT <= SWT_CAP ? SWT_CAP - raisedSWT : 0;
 	var remainingMKR = raisedMKR <= MKR_CAP ? MKR_CAP - raisedMKR : 0;
 	var remainingSNGLS = raisedSNGLS <= SNGLS_CAP ? SNGLS_CAP - raisedSNGLS : 0;
-
-	var tokenAmts = {
-		'chartETH': [raisedETH, remainingETH],
-		'chartREP': [raisedREP, remainingREP],
-		'chartDGD': [raisedDGD, remainingDGD],
-		'chartGNT': [raisedGNT, remainingGNT],
-		'chartMLN': [raisedMLN, remainingMLN],
-		'chartSWT': [raisedSWT, remainingSWT],
-		'chartMKR': [raisedMKR, remainingMKR],
-		'chartSNGLS': [raisedSNGLS, remainingSNGLS]
-	};
-
+	var tokenAmts = {'chartETH': [raisedETH, remainingETH], 'chartREP': [raisedREP, remainingREP], 'chartDGD': [raisedDGD, remainingDGD], 'chartGNT': [raisedGNT, remainingGNT], 'chartMLN': [raisedMLN, remainingMLN], 'chartSWT': [raisedSWT, remainingSWT], 'chartMKR': [raisedMKR, remainingMKR], 'chartSNGLS': [raisedSNGLS, remainingSNGLS]};
 	$('#raised-ETH').html(raisedETHp);
 	$('#raised-REP').html(raisedREPp);
 	$('#raised-DGD').html(raisedDGDp);
@@ -188,14 +168,93 @@ $(document).ready(function() {
 	$('#raised-SWT').html(raisedSWTp);
 	$('#raised-MKR').html(raisedMKRp);
 	$('#raised-SNGLS').html(raisedSNGLSp);
-
 	$('#usd-raised').html(raisedUSDp);
 	$('#num-contributors').html(numMVP);
-
 	$('#tkn-created').html(tknCreatedp);
-
 	$('tkn-per-eth').html(tknPerETH);
+	// **** End Set variable values
 
+
+	// Repeat web3 calls and jquery updates at random intervals
+	function timeout() {
+  	setTimeout(function () {
+
+			var weiPerEth = contractInstanceICO.weiPerEth.call();
+
+			var raisedETH = contractInstanceICO.raised.call()/weiPerEth;
+			var raisedFiat = contractInstanceICO.raisedFromFiat.call().toNumber();
+			var raisedREP = contractInstanceICO.raisedFromToken.call('0x48c80F1f4D53D5951e5D5438B54Cba84f29F32a5').toNumber()/weiPerEth*16;
+			var raisedDGD = contractInstanceICO.raisedFromToken.call('0xe0b7927c4af23765cb51314a0e0521a9645f0e2a').toNumber()/weiPerEth*27.5;
+			var raisedGNT = contractInstanceICO.raisedFromToken.call('0xa74476443119A942dE498590Fe1f2454d7D4aC0d').toNumber()/weiPerEth*.22;
+			var raisedMLN = contractInstanceICO.raisedFromToken.call('0xBEB9eF514a379B997e0798FDcC901Ee474B6D9A1').toNumber()/weiPerEth*36.4;
+			var raisedSWT = contractInstanceICO.raisedFromToken.call('0xb9e7f8568e08d5659f5d29c4997173d84cdf2607').toNumber()/weiPerEth*1.35;
+			var raisedMKR = contractInstanceICO.raisedFromToken.call('0xc66ea802717bfb9833400264dd12c2bceaa34a6d').toNumber()/weiPerEth*85.8;
+			var raisedSNGLS = contractInstanceICO.raisedFromToken.call('0xaec2e87e0a235266d9c5adc9deb4b2e29b54d009').toNumber()/weiPerEth*13.8;
+
+			var raisedETHp = numeral(raisedETH).format('0.0a');
+			var raisedFiatp = numeral(raisedFiat).format('0.0a');
+			var raisedREPp = numeral(raisedREP).format('0.0a');
+			var raisedDGDp = numeral(raisedDGD).format('0.0a');
+			var raisedGNTp = numeral(raisedGNT).format('0.0a');
+			var raisedMLNp = numeral(raisedMLN).format('0.0a');
+			var raisedSWTp = numeral(raisedSWT).format('0.0a');
+			var raisedMKRp = numeral(raisedMKR).format('0.0a');
+			var raisedSNGLSp = numeral(raisedSNGLS).format('0.0a');
+
+			var numberContributors = contractInstanceICO.numContributors.call().toNumber();
+			var numMVP = numberContributors <= 500 ? numberContributors : 500;
+
+			var tknCreated = contractInstanceToken.totalSupply.call().toNumber()/100000000;
+			var tknCreatedp = numeral(tknCreated).format('0.0a');
+
+			var tknDollarAmount = ((raisedREP * 16) + (raisedDGD * 27.5) + (raisedGNT * .22) + (raisedMLN * 36.4) + (raisedSWT * 1.35) + (raisedMKR * 85.8) + (raisedSNGLS * 13.8));
+			console.log('raised in ETH =', raisedETH * 75);
+			console.log('raised in Fiat =', raisedFiat);
+			console.log('raised in Tokens =', tknDollarAmount);
+
+			var raisedUSD = ((raisedETH * 75) + raisedFiat + tknDollarAmount);
+			var raisedUSDp = numeral(raisedUSD).format('0.0a');
+			var tknPerETH = (raisedETH + raisedFiat + tknDollarAmount) <= 750000 ? 150 : 100;
+
+			var remainingETH = raisedETH <= ETH_CAP ? ETH_CAP - raisedETH : 0;
+			var remainingREP = raisedREP <= REP_CAP ? REP_CAP - raisedREP : 0;
+			var remainingDGD = raisedDGD <= DGD_CAP ? DGD_CAP - raisedDGD : 0;
+			var remainingGNT = raisedGNT <= GNT_CAP ? GNT_CAP - raisedGNT : 0;
+			var remainingMLN = raisedMLN <= MLN_CAP ? MLN_CAP - raisedMLN : 0;
+			var remainingSWT = raisedSWT <= SWT_CAP ? SWT_CAP - raisedSWT : 0;
+			var remainingMKR = raisedMKR <= MKR_CAP ? MKR_CAP - raisedMKR : 0;
+			var remainingSNGLS = raisedSNGLS <= SNGLS_CAP ? SNGLS_CAP - raisedSNGLS : 0;
+
+			var tokenAmts = {
+				'chartETH': [raisedETH, remainingETH],
+				'chartREP': [raisedREP, remainingREP],
+				'chartDGD': [raisedDGD, remainingDGD],
+				'chartGNT': [raisedGNT, remainingGNT],
+				'chartMLN': [raisedMLN, remainingMLN],
+				'chartSWT': [raisedSWT, remainingSWT],
+				'chartMKR': [raisedMKR, remainingMKR],
+				'chartSNGLS': [raisedSNGLS, remainingSNGLS]
+			};
+
+			$('#raised-ETH').html(raisedETHp);
+			$('#raised-REP').html(raisedREPp);
+			$('#raised-DGD').html(raisedDGDp);
+			$('#raised-GNT').html(raisedGNTp);
+			$('#raised-MLN').html(raisedMLNp);
+			$('#raised-SWT').html(raisedSWTp);
+			$('#raised-MKR').html(raisedMKRp);
+			$('#raised-SNGLS').html(raisedSNGLSp);
+
+			$('#usd-raised').html(raisedUSDp);
+			$('#num-contributors').html(numMVP);
+			$('#tkn-created').html(tknCreatedp);
+			$('tkn-per-eth').html(tknPerETH);
+
+			timeout();
+		}, 10000);
+	}
+
+	timeout();
 	// END Web3 data connection
 
 	function handleOnLeave(index, nextIndex, direction){
