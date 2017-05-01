@@ -1,0 +1,237 @@
+/* ultra italic */
+@font-face {
+  font-family: 'geomanist-web';
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-Ultra-Italic-Webfont/geomanist-ultra-italic-webfont.eot");
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-Ultra-Italic-Webfont/geomanist-ultra-italic-webfont.eot?#iefix") format('embedded-opentype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Ultra-Italic-Webfont/geomanist-ultra-italic-webfont.woff2") format('woff2'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Ultra-Italic-Webfont/geomanist-ultra-italic-webfont.woff") format('woff'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Ultra-Italic-Webfont/geomanist-ultra-italic-webfont.ttf") format('truetype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Ultra-Italic-Webfont/geomanist-ultra-italic-webfont.svg#geomanistitalic") format('svg');
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* ultra */
+@font-face {
+  font-family: 'geomanist-web';
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-Ultra-Webfont/geomanist-ultra-webfont.eot");
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-Ultra-Webfont/geomanist-ultra-webfont.eot?#iefix") format('embedded-opentype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Ultra-Webfont/geomanist-ultra-webfont.woff2") format('woff2'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Ultra-Webfont/geomanist-ultra-webfont.woff") format('woff'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Ultra-Webfont/geomanist-ultra-webfont.ttf") format('truetype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Ultra-Webfont/geomanist-ultra-webfont.svg#geomanistregular") format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* black italic */
+@font-face {
+  font-family: 'geomanist-web';
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-Black-Italic-Webfont/geomanist-black-italic-webfont.eot");
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-Black-Italic-Webfont/geomanist-black-italic-webfont.eot?#iefix") format('embedded-opentype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Black-Italic-Webfont/geomanist-black-italic-webfont.woff2") format('woff2'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Black-Italic-Webfont/geomanist-black-italic-webfont.woff") format('woff'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Black-Italic-Webfont/geomanist-black-italic-webfont.ttf") format('truetype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Black-Italic-Webfont/geomanist-black-italic-webfont.svg#geomanistitalic") format('svg');
+  font-weight: 800;
+  font-style: italic;
+}
+
+/* black */
+@font-face {
+  font-family: 'geomanist-web';
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-Black-Webfont/geomanist-black-webfont.eot");
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-Black-Webfont/geomanist-black-webfont.eot?#iefix") format('embedded-opentype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Black-Webfont/geomanist-black-webfont.woff2") format('woff2'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Black-Webfont/geomanist-black-webfont.woff") format('woff'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Black-Webfont/geomanist-black-webfont.ttf") format('truetype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Black-Webfont/geomanist-black-webfont.svg#geomanistregular") format('svg');
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* boldd italic */
+@font-face {
+  font-family: 'geomanist-web';
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-Bold-Italic-Webfont/geomanist-bold-italic-webfont.eot");
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-Bold-Italic-Webfont/geomanist-bold-italic-webfont.eot?#iefix") format('embedded-opentype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Bold-Italic-Webfont/geomanist-bold-italic-webfont.woff2") format('woff2'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Bold-Italic-Webfont/geomanist-bold-italic-webfont.woff") format('woff'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Bold-Italic-Webfont/geomanist-bold-italic-webfont.ttf") format('truetype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Bold-Italic-Webfont/geomanist-bold-italic-webfont.svg#geomanistitalic") format('svg');
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* bold */
+@font-face {
+  font-family: 'geomanist-web';
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-Bold-Webfont/geomanist-bold-webfont.eot");
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-Bold-Webfont/geomanist-bold-webfont.eot?#iefix") format('embedded-opentype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Bold-Webfont/geomanist-bold-webfont.woff2") format('woff2'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Bold-Webfont/geomanist-bold-webfont.woff") format('woff'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Bold-Webfont/geomanist-bold-webfont.ttf") format('truetype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Bold-Webfont/geomanist-bold-webfont.svg#geomanistregular") format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* medium italic */
+@font-face {
+  font-family: 'geomanist-web';
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-Medium-Italic-Webfont/geomanist-medium-italic-webfont.eot");
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-Medium-Italic-Webfont/geomanist-medium-italic-webfont.eot?#iefix") format('embedded-opentype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Medium-Italic-Webfont/geomanist-medium-italic-webfont.woff2") format('woff2'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Medium-Italic-Webfont/geomanist-medium-italic-webfont.woff") format('woff'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Medium-Italic-Webfont/geomanist-medium-italic-webfont.ttf") format('truetype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Medium-Italic-Webfont/geomanist-medium-italic-webfont.svg#geomanistitalic") format('svg');
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* medium */
+@font-face {
+  font-family: 'geomanist-web';
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-Medium-Webfont/geomanist-medium-webfont.eot");
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-Medium-Webfont/geomanist-medium-webfont.eot?#iefix") format('embedded-opentype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Medium-Webfont/geomanist-medium-webfont.woff2") format('woff2'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Medium-Webfont/geomanist-medium-webfont.woff") format('woff'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Medium-Webfont/geomanist-medium-webfont.ttf") format('truetype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Medium-Webfont/geomanist-medium-webfont.svg#geomanistregular") format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* book italic */
+@font-face {
+  font-family: 'geomanist-web';
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-Book-Italic-Webfont/geomanist-book-italic-webfont.eot");
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-Book-Italic-Webfont/geomanist-book-italic-webfont.eot?#iefix") format('embedded-opentype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Book-Italic-Webfont/geomanist-book-italic-webfont.woff2") format('woff2'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Book-Italic-Webfont/geomanist-book-italic-webfont.woff") format('woff'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Book-Italic-Webfont/geomanist-book-italic-webfont.ttf") format('truetype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Book-Italic-Webfont/geomanist-book-italic-webfont.svg#geomanistitalic") format('svg');
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* book */
+@font-face {
+  font-family: 'geomanist-web';
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-Book-Webfont/geomanist-book-webfont.eot");
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-Book-Webfont/geomanist-book-webfont.eot?#iefix") format('embedded-opentype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Book-Webfont/geomanist-book-webfont.woff2") format('woff2'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Book-Webfont/geomanist-book-webfont.woff") format('woff'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Book-Webfont/geomanist-book-webfont.ttf") format('truetype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Book-Webfont/geomanist-book-webfont.svg#geomanistregular") format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* regular italic */
+@font-face {
+  font-family: 'geomanist-web';
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-Regular-Italic-Webfont/geomanist-regular-italic-webfont.eot");
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-Regular-Italic-Webfont/geomanist-regular-italic-webfont.eot?#iefix") format('embedded-opentype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Regular-Italic-Webfont/geomanist-regular-italic-webfont.woff2") format('woff2'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Regular-Italic-Webfont/geomanist-regular-italic-webfont.woff") format('woff'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Regular-Italic-Webfont/geomanist-regular-italic-webfont.ttf") format('truetype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Regular-Italic-Webfont/geomanist-regular-italic-webfont.svg#geomanistitalic") format('svg');
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* regular */
+@font-face {
+  font-family: 'geomanist-web';
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-Regular-Webfont/geomanist-regular-webfont.eot");
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-Regular-Webfont/geomanist-regular-webfont.eot?#iefix") format('embedded-opentype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Regular-Webfont/geomanist-regular-webfont.woff2") format('woff2'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Regular-Webfont/geomanist-regular-webfont.woff") format('woff'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Regular-Webfont/geomanist-regular-webfont.ttf") format('truetype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Regular-Webfont/geomanist-regular-webfont.svg#geomanistregular") format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* light italic */
+@font-face {
+  font-family: 'geomanist-web';
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-Light-Italic-Webfont/geomanist-light-italic-webfont.eot");
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-Light-Italic-Webfont/geomanist-light-italic-webfont.eot?#iefix") format('embedded-opentype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Light-Italic-Webfont/geomanist-light-italic-webfont.woff2") format('woff2'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Light-Italic-Webfont/geomanist-light-italic-webfont.woff") format('woff'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Light-Italic-Webfont/geomanist-light-italic-webfont.ttf") format('truetype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Light-Italic-Webfont/geomanist-light-italic-webfont.svg#geomanistitalic") format('svg');
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* light */
+@font-face {
+  font-family: 'geomanist-web';
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-Light-Webfont/geomanist-light-webfont.eot");
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-Light-Webfont/geomanist-light-webfont.eot?#iefix") format('embedded-opentype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Light-Webfont/geomanist-light-webfont.woff2") format('woff2'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Light-Webfont/geomanist-light-webfont.woff") format('woff'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Light-Webfont/geomanist-light-webfont.ttf") format('truetype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Light-Webfont/geomanist-light-webfont.svg#geomanistregular") format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* extralight italic */
+@font-face {
+  font-family: 'geomanist-web';
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-ExtraLight-Italic Webfont/geomanist-extralight-italic-webfont.eot");
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-ExtraLight-Italic Webfont/geomanist-extralight-italic-webfont.eot?#iefix") format('embedded-opentype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-ExtraLight-Italic Webfont/geomanist-extralight-italic-webfont.woff2") format('woff2'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-ExtraLight-Italic Webfont/geomanist-extralight-italic-webfont.woff") format('woff'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-ExtraLight-Italic Webfont/geomanist-extralight-italic-webfont.ttf") format('truetype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-ExtraLight-Italic Webfont/geomanist-extralight-italic-webfont.svg#geomanistitalic") format('svg');
+  font-weight: 200;
+  font-style: italic;
+}
+
+/* extralight */
+@font-face {
+  font-family: 'geomanist-web';
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-ExtraLight-Webfont/geomanist-extralight-webfont.eot");
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-ExtraLight-Webfont/geomanist-extralight-webfont.eot?#iefix") format('embedded-opentype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-ExtraLight-Webfont/geomanist-extralight-webfont.woff2") format('woff2'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-ExtraLight-Webfont/geomanist-extralight-webfont.woff") format('woff'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-ExtraLight-Webfont/geomanist-extralight-webfont.ttf") format('truetype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-ExtraLight-Webfont/geomanist-extralight-webfont.svg#geomanistregular") format('svg');
+  font-weight: 200;
+  font-style: normal;
+}
+
+/* thin italic */
+@font-face {
+  font-family: 'geomanist-web';
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-Thin-Italic-Webfont/geomanist-thin-italic-webfont.eot");
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-Thin-Italic-Webfont/geomanist-thin-italic-webfont.eot?#iefix") format('embedded-opentype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Thin-Italic-Webfont/geomanist-thin-italic-webfont.woff2") format('woff2'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Thin-Italic-Webfont/geomanist-thin-italic-webfont.woff") format('woff'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Thin-Italic-Webfont/geomanist-thin-italic-webfont.ttf") format('truetype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Thin-Italic-Webfont/geomanist-thin-italic-webfont.svg#geomanistitalic") format('svg');
+  font-weight: 100;
+  font-style: italic;
+}
+
+
+/* thin */
+@font-face {
+  font-family: 'geomanist-web';
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-Thin-Webfont/geomanist-thin-webfont.eot");
+  src: url("/fonts/Geomanist-Complete-Webfont/Geomanist-Thin-Webfont/geomanist-thin-webfont.eot?#iefix") format('embedded-opentype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Thin-Webfont/geomanist-thin-webfont.woff2") format('woff2'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Thin-Webfont/geomanist-thin-webfont.woff") format('woff'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Thin-Webfont/geomanist-thin-webfont.ttf") format('truetype'),
+         url("/fonts/Geomanist-Complete-Webfont/Geomanist-Thin-Webfont/geomanist-thin-webfont.svg#geomanistregular") format('svg');
+  font-weight: 100;
+  font-style: normal;
+}
+
+

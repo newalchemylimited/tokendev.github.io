@@ -1,0 +1,21 @@
+{
+  "name": "tokencardweb",
+  "version": "1.0.0",
+  "description": "custom website for tokencard.io",
+  "main": "main.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "reformcollective",
+  "license": "UNLICENCED",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-connect": "^5.0.0",
+    "gulp-sass": "^3.1.0"
+  }
+}
