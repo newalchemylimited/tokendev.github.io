@@ -59,6 +59,12 @@ hr {
     padding: 0;
 }
 
+pre {
+  border: 1px solid #222;
+  background-color: #DEDEDE;
+  padding: 6px;
+  text-align: center;
+}
 /*
  * Remove the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers:
@@ -1514,8 +1520,8 @@ $chartMarginWidth: $chartMarginWidthTotal/2;
 }
 
 .crowdsale-metric-contain {
-    max-width:33%;
-    min-width:33%;
+    max-width:25%;
+    min-width:25%;
     flex:1 0 auto;
     min-height:100px;
     height:auto;
