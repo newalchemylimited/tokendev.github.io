@@ -118,25 +118,37 @@ $(document).ready(function() {
 
 	var raisedETH = contractInstanceICO.raised.call()/weiPerEth;
 	var raisedFiat = contractInstanceICO.raisedFromFiat.call().toNumber();
-	var raisedREP = (contractInstanceICO.raisedFromToken.call('0x48c80F1f4D53D5951e5D5438B54Cba84f29F32a5').toNumber()/weiPerEth*16).toFixed();
-	var raisedDGD = (contractInstanceICO.raisedFromToken.call('0xe0b7927c4af23765cb51314a0e0521a9645f0e2a').toNumber()/weiPerEth*27.5).toFixed();
-	var raisedGNT = (contractInstanceICO.raisedFromToken.call('0xa74476443119A942dE498590Fe1f2454d7D4aC0d').toNumber()/weiPerEth*.22).toFixed();
-	var raisedMLN = (contractInstanceICO.raisedFromToken.call('0xBEB9eF514a379B997e0798FDcC901Ee474B6D9A1').toNumber()/weiPerEth*36.4).toFixed();
-	var raisedSWT = (contractInstanceICO.raisedFromToken.call('0xb9e7f8568e08d5659f5d29c4997173d84cdf2607').toNumber()/weiPerEth*1.35).toFixed();
-	var raisedMKR = (contractInstanceICO.raisedFromToken.call('0xc66ea802717bfb9833400264dd12c2bceaa34a6d').toNumber()/weiPerEth*85.8).toFixed();
-	var raisedSNGLS = (contractInstanceICO.raisedFromToken.call('0xaec2e87e0a235266d9c5adc9deb4b2e29b54d009').toNumber()/weiPerEth*13.8).toFixed();
+	var raisedREP = contractInstanceICO.raisedFromToken.call('0x48c80F1f4D53D5951e5D5438B54Cba84f29F32a5').toNumber()/weiPerEth*16;
+	var raisedDGD = contractInstanceICO.raisedFromToken.call('0xe0b7927c4af23765cb51314a0e0521a9645f0e2a').toNumber()/weiPerEth*27.5;
+	var raisedGNT = contractInstanceICO.raisedFromToken.call('0xa74476443119A942dE498590Fe1f2454d7D4aC0d').toNumber()/weiPerEth*.22;
+	var raisedMLN = contractInstanceICO.raisedFromToken.call('0xBEB9eF514a379B997e0798FDcC901Ee474B6D9A1').toNumber()/weiPerEth*36.4;
+	var raisedSWT = contractInstanceICO.raisedFromToken.call('0xb9e7f8568e08d5659f5d29c4997173d84cdf2607').toNumber()/weiPerEth*1.35;
+	var raisedMKR = contractInstanceICO.raisedFromToken.call('0xc66ea802717bfb9833400264dd12c2bceaa34a6d').toNumber()/weiPerEth*85.8;
+	var raisedSNGLS = contractInstanceICO.raisedFromToken.call('0xaec2e87e0a235266d9c5adc9deb4b2e29b54d009').toNumber()/weiPerEth*13.8;
+
+	var raisedETHp = numeral(raisedETH).format('0.0a');
+	var raisedFiatp = numeral(raisedFiat).format('0.0a');
+	var raisedREPp = numeral(raisedREP).format('0.0a');
+	var raisedDGDp = numeral(raisedDGD).format('0.0a');
+	var raisedGNTp = numeral(raisedGNT).format('0.0a');
+	var raisedMLNp = numeral(raisedMLN).format('0.0a');
+	var raisedSWTp = numeral(raisedSWT).format('0.0a');
+	var raisedMKRp = numeral(raisedMKR).format('0.0a');
+	var raisedSNGLSp = numeral(raisedSNGLS).format('0.0a');
 
 	var numberContributors = contractInstanceICO.numContributors.call().toNumber();
 	var numMVP = numberContributors <= 500 ? numberContributors : 500;
 
 	var tknCreated = contractInstanceToken.totalSupply.call().toNumber()/100000000;
+	var tknCreatedp = numeral(tknCreated).format('0.0a');
 
 	var tknDollarAmount = ((raisedREP * 16) + (raisedDGD * 27.5) + (raisedGNT * .22) + (raisedMLN * 36.4) + (raisedSWT * 1.35) + (raisedMKR * 85.8) + (raisedSNGLS * 13.8));
 	console.log('raised in ETH =', raisedETH * 75);
 	console.log('raised in Fiat =', raisedFiat);
 	console.log('raised in Tokens =', tknDollarAmount);
 
-	var raisedUSD = ((raisedETH * 75) + raisedFiat + tknDollarAmount).toFixed();
+	var raisedUSD = ((raisedETH * 75) + raisedFiat + tknDollarAmount);
+	var raisedUSDp = numeral(raisedUSD).format('0.0a');
 	var tknPerETH = (raisedETH + raisedFiat + tknDollarAmount) <= 750000 ? 150 : 100;
 
 	const ETH_CAP = 65000;
@@ -168,19 +180,19 @@ $(document).ready(function() {
 		'chartSNGLS': [raisedSNGLS, remainingSNGLS]
 	};
 
-	$('#raised-ETH').html(tokenAmts.chartETH[0]);
-	$('#raised-REP').html(tokenAmts.chartREP[0]);
-	$('#raised-DGD').html(tokenAmts.chartDGD[0]);
-	$('#raised-GNT').html(tokenAmts.chartGNT[0]);
-	$('#raised-MLN').html(tokenAmts.chartMLN[0]);
-	$('#raised-SWT').html(tokenAmts.chartSWT[0]);
-	$('#raised-MKR').html(tokenAmts.chartMKR[0]);
-	$('#raised-SNGLS').html(tokenAmts.chartSNGLS[0]);
+	$('#raised-ETH').html(raisedETHp);
+	$('#raised-REP').html(raisedREPp);
+	$('#raised-DGD').html(raisedDGDp);
+	$('#raised-GNT').html(raisedGNTp);
+	$('#raised-MLN').html(raisedMLNp);
+	$('#raised-SWT').html(raisedSWTp);
+	$('#raised-MKR').html(raisedMKRp);
+	$('#raised-SNGLS').html(raisedSNGLSp);
 
-	$('#usd-raised').html(raisedUSD);
+	$('#usd-raised').html(raisedUSDp);
 	$('#num-contributors').html(numMVP);
 
-	$('#tkn-created').html(tknCreated);
+	$('#tkn-created').html(tknCreatedp);
 
 	$('tkn-per-eth').html(tknPerETH);
 
