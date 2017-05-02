@@ -375,7 +375,6 @@
 
 
 
-
         $(document).ready(function() {
         	smoothScroll.init();
         	retina();
@@ -803,25 +802,13 @@
             }
           });
 
-
-
-        	// REMOVE ALL THIS JUNK BEFORE THIS GOES TO PRODUCTION
-        	///////////////////////////////////////////////////////
-        	//setInterval(function(){
-        	// 	$('div:not([class],[id])').each(function(){
-        	// 	$(this).css('opacity', 0);
-        	// })
-        	// }, 5000);
-
         	setTimeout(function(){
         		$('div:not([class],[id])').each(function(){
         		$(this).css('opacity', 0);
         	})
         	}, 3000);
 
-
         });
-
         </script>
     </body>
 </html>
