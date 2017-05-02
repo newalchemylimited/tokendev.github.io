@@ -466,9 +466,16 @@
         	$('tkn-per-eth').html(tknPerETH);
         	// **** End Set variable values
 
+          function getRndmFromSet(set) {
+            var rndm = Math.floor(Math.random() * set.length);
+            return set[rndm];
+          }
 
         	// Repeat web3 calls and jquery updates at random intervals
         	function timeout() {
+
+            var nextInterval = getRndmFromSet([7000,11000,13000,17000]);
+
           	setTimeout(function () {
 
         			var weiPerEth = contractInstanceICO.weiPerEth.call();
@@ -543,7 +550,7 @@
         			$('tkn-per-eth').html(tknPerETH);
 
         			timeout();
-        		}, 10000);
+        		}, nextInterval);
         	}
 
         	timeout();
