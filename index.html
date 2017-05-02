@@ -678,16 +678,29 @@
         	// video player
         	$(".video-preview-overlay").modalVideo({channel:'vimeo'});
 
+          var eventStart = new Date("2017/05/02 16:00:00 GMT");
+          var eventStartSeconds = eventStart.getTime();
+          console.log(eventStartSeconds);
+          var now = new Date();
+          var nowSeconds = now.getTime();
+          console.log(nowSeconds);
+
+          if (nowSeconds >= eventStartSeconds) {
+            $('#countdown-contain').html(''
+        	    + '<div class="countdown-component"> <div class="countdown-value">0</div> <div class="countdown-label">Days</div> </div>'
+        	    + '<div class="countdown-component"> <div class="countdown-value">0</div> <div class="countdown-label">Hours</div> </div>'
+        	    + '<div class="countdown-component"> <div class="countdown-value">0</div> <div class="countdown-label">Minutes</div> </div>'
+        	    + '<div class="countdown-component"> <div class="countdown-value">0</div> <div class="countdown-label">Seconds</div> </div>');
+            $('.begins-label').html('Status: Contracts Live');
+          }
+
         	// countdown YYYY/MM/DD hh:mm:ss
         	$('#countdown-contain').countdown('2017/05/02 16:00:00 GMT').on('update.countdown', function(event) {
         		var $this = $(this).html(event.strftime(''
         	    + '<div class="countdown-component"> <div class="countdown-value">%-d</div> <div class="countdown-label">Day%!d</div> </div>'
         	    + '<div class="countdown-component"> <div class="countdown-value">%-H</div> <div class="countdown-label">Hours</div> </div>'
         	    + '<div class="countdown-component"> <div class="countdown-value">%M</div> <div class="countdown-label">Minutes</div> </div>'
-        	    + '<div class="countdown-component"> <div class="countdown-value">%S</div> <div class="countdown-label">Seconds</div> </div>'))
-                .on('finish.countdown', function() {
-                  $(this).hide();
-                });
+        	    + '<div class="countdown-component"> <div class="countdown-value">%S</div> <div class="countdown-label">Seconds</div> </div>'));
         	});
 
 
