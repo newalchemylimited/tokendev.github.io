@@ -76,6 +76,7 @@
                             <div class="begins-label">Begins May 2, 2016 &ndash; 16:00 GMT</div>
                             <a class="begins-btn" href="#contribute"><span class="icon-contribute"></span> Become a Contributor</a>
                         </div>
+                        <div id="crowdsale-start-message">Status: In Progress</div>
                         <div id="countdown-contain"></div>
                     </div>
                     <div class="charts-container">
@@ -413,9 +414,9 @@
         	const REP_CAP = 50000;
           const REP_USD = 16.12;
         	const DGD_CAP = 10000;
-          const DGD_USD = 30.408
+          const DGD_USD = 30.408;
         	const GNT_CAP = 2750000;
-          const GNT_USD = 0.203
+          const GNT_USD = 0.203;
         	const MLN_CAP = 5000;
           const MLN_USD = 36.7;
         	const SWT_CAP = 70000;
@@ -423,7 +424,7 @@
         	const MKR_CAP = 3500;
           const MKR_USD = 75.4;
         	const SNGLS_CAP = 3500000;
-          const SNGLS_USD = 0.1029
+          const SNGLS_USD = 0.1029;
 
         	// **** Set variable values outside of loop
         	var weiPerEth = contractInstanceICO.weiPerEth.call();
@@ -673,6 +674,7 @@
         	$(".video-preview-overlay").modalVideo({channel:'vimeo'});
 
         	// countdown YYYY/MM/DD hh:mm:ss
+          $('#crowdsale-start-message').hide();
         	$('#countdown-contain').countdown('2017/05/02 16:00:00 GMT').on('update.countdown', function(event) {
         		var $this = $(this).html(event.strftime(''
         	    + '<div class="countdown-component"> <div class="countdown-value">%-d</div> <div class="countdown-label">Day%!d</div> </div>'
@@ -681,6 +683,7 @@
         	    + '<div class="countdown-component"> <div class="countdown-value">%S</div> <div class="countdown-label">Seconds</div> </div>'))
                 .on('finish.countdown', function() {
                   $(this).hide();
+                  $('#crowdsale-start-message').show();
                 });
         	});
 
