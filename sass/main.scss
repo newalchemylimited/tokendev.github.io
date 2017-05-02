@@ -98,6 +98,13 @@ textarea {
     resize: vertical;
 }
 
+.noscript {
+  background-color: red;
+  color: white;
+  text-align: center;
+  padding: 4px;
+}
+
 /* ==========================================================================
    Browser Upgrade Prompt
    ========================================================================== */
