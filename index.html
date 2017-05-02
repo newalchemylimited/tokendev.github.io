@@ -560,6 +560,11 @@
         			$('#tkn-created').html(tknCreatedp);
         			$('tkn-per-eth').html(tknPerETH);
 
+              var chartIds = ['chartETH', 'chartREP', 'chartDGD', 'chartGNT', 'chartMLN', 'chartSWT', 'chartMKR', 'chartSNGLS'];
+              _.each(chartIds, function(chartId, index){
+                createChartForId(chartId, index, tokenAmts);
+              });
+
         			timeout();
         		}, nextInterval);
         	}
