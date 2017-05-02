@@ -680,10 +680,8 @@
 
           var eventStart = new Date("2017/05/02 16:00:00 GMT");
           var eventStartSeconds = eventStart.getTime();
-          console.log(eventStartSeconds);
           var now = new Date();
           var nowSeconds = now.getTime();
-          console.log(nowSeconds);
 
           if (nowSeconds >= eventStartSeconds) {
             $('#countdown-contain').html(''
@@ -789,8 +787,6 @@
         			}
         		});
 
-        		console.log(checked)
-        		console.log(checked.length)
         		if(checked.length == 3){
         			$(".confirm-btn").removeClass('disabled');
         		}
