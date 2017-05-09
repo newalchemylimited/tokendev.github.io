@@ -39,4 +39,6 @@ jspm_packages
 .sass-cache
 .sass-cache/*
 
+tc-session
+.gitignore
 .DS_Store
