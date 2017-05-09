@@ -160,57 +160,6 @@
               </div>
           </div>
       </section>
-
-<!-- ********************************************************************************************************* -->
-<!-- ********************************************************************************************************* -->
-<!-- ********************************************************************************************************* -->
-
-      <section style="display: block;" class="section section-token" data-percentage="70" data-centered="false">
-        <div class="foobar">
-          <h1>Token Check Widgets</h1>
-          <p>Use the form below to calculate the number of TKN you should receive, based on your contribution during the TKN Creation Event.<p>
-          <div class="form-one">
-            <form id="token-form-one">
-              Token/Asset:
-              <br>
-              <select name="asset">
-                <option value="eth">ETH</option>
-                <option value="usd">USD</option>
-                <option value="rep">REP</option>
-                <option value="dgd">DGD</option>
-                <option value="gnt">GNT</option>
-                <option value="mln">MLN</option>
-                <option value="swt">SWT</option>
-                <option value="mkr">MKR</option>
-                <option value="sngls">SNGLS</option>
-              </select>
-              <br>
-              Amount Sent:
-              <br>
-              <input type="text" name="quantity"><br>
-              <input type="submit" value="Submit">
-            </form>
-            <div id="form-one-results"></div>
-          </div>
-
-          <br>
-          <br>
-
-          <p>Use this form to check your balance against the actual TKN contract.</p>
-          <div class="foobar">*** Coming soon, pending Final TKN contract location. Please check back later. ***</div>
-          <div class="form-two">
-            <form id="token-form-two">
-              Your Address:
-              <br>
-              <input type="text" name="address"><br>
-              <input type="submit" value="Submit">
-            </form>
-            <div id="form-two-results"></div>
-          </div>
-
-        </div>
-      </section>
-
       <section class="section section-app" data-percentage="90" data-centered="false">
           <div class="container">
               <div class="app-demo">
@@ -758,71 +707,6 @@ $(document).ready(function() {
 		$(this).css('opacity', 0);
 	})
 	}, 3000);
-
-// ***************************************************************************************************************
-// ***************************************************************************************************************
-  var formOneValues = {};
-  var formTwoValues = {};
-  var tknCreated = 0;
-
-  $('#token-form-one').submit(function(e) {
-    e.preventDefault();
-    // Put form inputs into an object
-    var $inputs = $('#token-form-one :input');
-    $inputs.each(function() {
-      formOneValues[this.name] = $(this).val();
-    });
-    switch(formOneValues.asset) {
-      case 'eth':
-        tknCreated = formOneValues.quantity * 100;
-        $('#form-one-results').html(`You should have ${tknCreated} TKN`);
-        break;
-      case 'usd':
-        tknCreated = formOneValues.quantity / ETH_USD * 100;
-        $('#form-one-results').html(`You should have ${tknCreated} TKN`);
-        break;
-      case 'rep':
-        tknCreated = (formOneValues.quantity * (REP_USD / ETH_USD) * 100);
-        $('#form-one-results').html(`You should have ${tknCreated} TKN`);
-        break;
-      case 'dgd':
-        tknCreated = (formOneValues.quantity * (DGD_USD / ETH_USD) * 100);
-        $('#form-one-results').html(`You should have ${tknCreated} TKN`);
-        break;
-      case 'gnt':
-        tknCreated = (formOneValues.quantity * (GNT_USD / ETH_USD) * 100);
-        $('#form-one-results').html(`You should have ${tknCreated} TKN`);
-        break;
-      case 'mln':
-        tknCreated = (formOneValues.quantity * (MLN_USD / ETH_USD) * 100);
-        $('#form-one-results').html(`You should have ${tknCreated} TKN`);
-        break;
-      case 'swt':
-        tknCreated = (formOneValues.quantity * (SWT_USD / ETH_USD) * 100);
-        $('#form-one-results').html(`You should have ${tknCreated} TKN`);
-        break;
-      case 'mkr':
-        tknCreated = (formOneValues.quantity * (MKR_USD / ETH_USD) * 100);
-        $('#form-one-results').html(`You should have ${tknCreated} TKN`);
-        break;
-      case 'sngls':
-        tknCreated = (formOneValues.quantity * (SNGLS_USD / ETH_USD) * 100);
-        $('#form-one-results').html(`You should have ${tknCreated} TKN`);
-        break;
-    }
-  });
-
-  $('#token-form-two').submit(function(e) {
-    e.preventDefault();
-    // Put form inputs into an object
-    var $inputs = $('#token-form-two :input');
-    $inputs.each(function() {
-      formTwoValues[this.name] = $(this).val();
-    });
-    validatedAddress = formTwoValues.address;
-    var tknBalance = (contractInstanceToken.balanceOf.call(validatedAddress))/100000000;
-    $('#form-two-results').html(`Your actual balance is ${tknBalance} TKN`);
-  });
 
 });
 </script>
